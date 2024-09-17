@@ -1,0 +1,20 @@
+/* <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900*/
+
+font {
+  font-family: "Handjet", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700px;
+  font-style: normal;
+  font-variation-settings:
+    "ELGR" 1,
+    "ELSH" 2;
+}
+
+/* ----------------------------------------------------------------------Global Style ------------------------------------------------*/
+body {
+    background-color: purple;
+    font-family: "Handjet", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700px;
+}
