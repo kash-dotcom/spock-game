@@ -85,27 +85,27 @@ element.style {
     align-items: center;
 }
 
-.rock {
+#rock {
     background-color: #4e4577;
     border: none;
 }
 
-.paper {
+#paper {
     background-color: #ffbd59;
     border: none;
 }
 
-.scissors {
+#scissors {
     background-color: #a21c16 ;
     border: none;
 }
 
-.lizard {
+#lizard {
     background-color: #04814a;
     border: none;
 }
 
-.spock {
+#spock {
     background-color: #0a66bb;
     border: none;
 }
