@@ -12,8 +12,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="instructions-btn">
+        <button><i class="fa-solid fa-circle-question"></i></button>   
+    </div>
+
     <div id="heading">
         <h1>Spock Game</h1>
         <h2>Rock</h2>
@@ -23,36 +31,67 @@
         <h2>Spock</h2>
     </div>
 
-    <div>
-        <div class="rock">
-            <button class="btn"><i class="fa-regular fa-hand-back-fist"></i></button>
+    <div id="selection" >
+        <div class="rock-container selection-btn" >
+            <button class="rock btn"><i class="fa-solid fa-hand-back-fist"></i></button>
             <h3>Rock</h3>
         </div>
 
-        <div class="Paper">
-            <button class="btn"><i class="fa-regular fa-hand"></i></button>
-            <h3>Rock</h3>
+        <div class="paper-container selection-btn">
+            <button class="paper btn"><i class="fa-solid fa-hand"></i></button>
+            <h3>Paper</h3>
         </div>
 
-        <div class="Scissors">
-            <button class="btn"><i class="fa-regular fa-hand-scissors"></i></button>
-            <h3>Rock</h3>
+        <div class="scissors-container selection-btn">
+            <button class="scissors btn"><i class="fa-solid fa-hand-scissors"></i></button>
+            <h3>Scissors</h3>
         </div>
         
-        <div class="Lizard">
-            <button class="btn"><i class="fa-regular fa-hand-lizard"></i></button>
-            <h3>Rock</h3>
+        <div class="lizard-container selection-btn">
+            <button class="lizard btn"><i class="fa-solid fa-hand-lizard"></i></button>
+            <h3>Lizard</h3>
         </div>
 
-        <div class="Spock"></div>
-            <button class="btn"><i class="fa-solid fa-hand-spock"></i></button>
-            <h3>Rock</h3>
+        <div class="spock-container selection-btn">
+            <button class="spock btn"><i class="fa-solid fa-hand-spock"></i></button>
+            <h3>Spock</h3>
         </div>
 
     </div>
 
     <button id="demo">Start</button>
 
+<!-- The instructions modal-->
+    <div id="instruction-modal" class="modal-background">
+        <div id="instruction"> 
+                <h2>Instructions</h2>
+                <p> Tried rock paper scissors? Now let your imagination<br>
+                    run wild with Rock Paper Scissors Lizard Spock <br>
+                    In the words of the genius that is Dr Sheldon Cooper. <br>
+                    <br>
+                    “It’s very simple...
+                    <br>
+                    Scissors <strong>cuts</strong>  Paper
+                    <br>
+                    Paper <strong>covers</strong>  Rock
+                    <br>
+                    Rock <strong>crushes</strong> Lizard
+                    <br>
+                    Lizard <strong>poisons</strong> Spock
+                    <br>
+                    Spock <strong>smashes</strong> Scissors
+                    <br>
+                    Scissors <strong>decapitates</strong> Lizard
+                    <br>
+                    Lizard <strong>eats</strong> Paper
+                    <br>
+                    Paper <strong>disproves</strong> Spock
+                    <br>
+                    Spock <strong>vaporises</strong> Rock
+                    <br>
+                    and as it always has Rock crushes</strong> scissors”</p>
+        </div>
+    </div>
 
     <script src="assets/js/scripts.js"></script>
     <script src="https://kit.fontawesome.com/2a30da66ac.js" crossorigin="anonymous"></script>

@@ -13,8 +13,113 @@ font {
 
 /* ----------------------------------------------------------------------Global Style ------------------------------------------------*/
 body {
-    background-color: purple;
     font-family: "Handjet", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700px;
+}
+
+
+/* Circle Button - https://stackoverflow.com/questions/38320878/circle-button-css*/
+
+.btn {
+    display:block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+
+/* ----------------------------------------------------------------------body------------------------------------------------*/
+
+/*The background for the model 
+/* https://www.w3schools.com/howto/howto_css_modals.asp*/
+
+
+ .modal-background {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color:  rbg(0,0,0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+element.style {
+    margin-left: 1%;
+}
+
+#instruction-modal {
+  padding: 44px 0 0 13px;
+  border: 1px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+  color: aliceblue;
+}
+
+#instruction-modal p {
+    font-family: barlow, sans-serif;
+} 
+
+.fa-circle-question {
+    color: aliceblue;
+    z-index: 10;
+    font-size: 30px;
+    padding: 0 0 0 10px;
+    position: fixed;
+}
+
+
+/*-----------selection -------*/
+
+#selection {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.selection-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rock {
+    background-color: #4e4577;
+    border: none;
+}
+
+.paper {
+    background-color: #ffbd59;
+    border: none;
+}
+
+.scissors {
+    background-color: #a21c16 ;
+    border: none;
+}
+
+.lizard {
+    background-color: #04814a;
+    border: none;
+}
+
+.spock {
+    background-color: #0a66bb;
+    border: none;
+}
+
+.fa-solid {
+    font-weight: 900;
+    font-size: 64px;
+    color: whitesmoke;
+}
+
+/*Active button*/
+.btn:hover, .btn:active {
+    background-color: black;
+    border-width: 100px;
+    border-color: #ffbd59;
+    border: 10px solid;
 }
