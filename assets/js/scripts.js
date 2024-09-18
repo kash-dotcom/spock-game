@@ -9,11 +9,6 @@ btn.onclick = function () {
 }
 
 
-
-
-
-
-
 // userChoice
 let rock =  document.getElementById("rock");
 let paper = document.getElementById("paper")
@@ -22,7 +17,6 @@ let lizard = document.getElementById("lizard")
 let spock = document.getElementById("spock")
 
 let userChoice;
-let computerChoice;
 
 //creating userChoice
 function rockSelected(event) {
@@ -52,17 +46,29 @@ lizard.addEventListener("click", lizardSelected);
 spock.addEventListener("click", spockSelected);
 
 
+//creating computerChoice - https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/
 
 
+let optionsArray = ["rock", "paper", "scissors", "lizard", "spock"];
 
+function computerChoice() {
+    console.log(optionsArray[(Math.floor(Math.random() * optionsArray.length))]);
+}
+computerChoice()
+
+//Who's the winner!! Computer Vs Human
+function whosTheWinner() {
 if (userChoice == "rock" && computerChoice == "scissors" || userChoice == "rock" && computerChoice == "lizard") {
     userWins = true;
-
+    alert("")
 } else if (userChoice == "paper" && computerChoice == "rock"|| userChoice == "paper" && computerChoice == "spock") {
     userWins = true;
+    console.log(userWins);
+
 
 } else (userChoice == "scissors" && computerChoice == "lizard" || userChoice == "scissors" && computerChoice == "paper"); {
     userWins = true;
+    console.log(userWins);
 }
-
-
+}
+console.log(userWins);
