@@ -4,7 +4,7 @@
 font {
   font-family: "Handjet", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700px;
+  font-weight: 700;
   font-style: normal;
   font-variation-settings:
     "ELGR" 1,
@@ -31,6 +31,16 @@ body {
 
 /* ----------------------------------------------------------------------body------------------------------------------------*/
 
+
+/*heading styling*/
+
+#heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 /*The background for the model 
 /* https://www.w3schools.com/howto/howto_css_modals.asp*/
 
@@ -44,7 +54,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color:  rbg(0,0,0);
+    background-color:  rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
 }
 
