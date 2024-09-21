@@ -26,6 +26,9 @@ body {
     height: 100px;
     width: 100px;
     border-radius: 50%;
+    font-weight: 900;
+    font-size: 64px;
+    color: whitesmoke;
 }
 
 
@@ -125,10 +128,16 @@ element.style {
     border: none;
 }
 
-.fa-solid {
-    font-weight: 900;
-    font-size: 64px;
-    color: whitesmoke;
+.robots-choice, .user-selction {
+    color: black;
+}
+
+.user {
+    padding-bottom: 14px;
 }
 
 
+/* visability hidden onload https://www.reddit.com/r/learnjavascript/comments/aw5l96/how_do_i_change_the_display_or_visibility/ */
+.user-selection {
+    visibility: hidden;
+}

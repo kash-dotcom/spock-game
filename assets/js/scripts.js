@@ -31,18 +31,45 @@ scissors.addEventListener("click", scissorsSelected);
 lizard.addEventListener("click", lizardSelected);
 spock.addEventListener("click", spockSelected);
 
-//Getting class
-let choiceBtn = document.getElementsByClassName("selection-btn")
 
 
-//Changing colour of buttons once user selects
-function userChoiceBtn() {
-    rock.style.backgroundColor = "black";
-    rock.style.borderStyle = "solid";
-    rock.style.borderWidth = "4px";
-    rock.style.borderColor = "#ffbd59";
-    
+// Toggle visibility of the Rock Element
+//onclick hide and show  https://www.youtube.com/watch?v=-oQnDrNzTTA
+//https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+//https://www.washington.edu/accesscomputing/webd2/student/unit5/module2/lesson5.html
+//showing user selection
+ function userClick() {
+    var choiceBtn = document.getElementsByClassName("user-selection");
+
+    var displaySettings = choiceBtn[0].style.visibility;
+
+    if(displaySettings == "hidden") {
+        choiceBtn[0].style.visibility = "visible";
+    } else {
+        choiceBtn[0].style.visibility = "hidden";
     }
+ }
+    
+
+
+
+/*
+ //iterating through loop https://stackoverflow.com/questions/39452193/loop-through-array-and-add-event-listener-click-to-each
+ // create an array - https://www.w3schools.com/js/js_arrays.asp
+ 
+ const userMarker = document.getElementsByClassName("user-selection"); 
+
+ console.log(userMarker);
+ /*
+ userMarker.forEach(function) {
+    userMarker.addEventListener("click", )
+       
+
+    };
+
+*/
+
+
 
 //creating userChoice
 var userChoice;
@@ -50,35 +77,35 @@ function rockSelected() {
     userChoice = "rock";
     console.log("user selected " + userChoice);
     whosTheWinner(); 
-    userChoiceBtn();  
+  
 }
 
 function paperSelected() {
     userChoice = "paper";
     console.log("user selected " + userChoice);
     whosTheWinner();
-    userChoiceBtn();  
+    
    
 }
 function scissorsSelected() {
     userChoice = "scissors";
     console.log("user selected " + userChoice);
     whosTheWinner();
-    userChoiceBtn();  
+    
     
 }
 function lizardSelected() {
     userChoice = "lizard";
     console.log("user selected " + userChoice);
     whosTheWinner();
-    userChoiceBtn();  
+    
     
 }
 function spockSelected(event) {
     userChoice = "spock";
     console.log("user selected " + userChoice);
     whosTheWinner();
-    userChoiceBtn();  
+ 
    
 }
 
