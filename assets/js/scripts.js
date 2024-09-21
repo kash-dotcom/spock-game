@@ -94,10 +94,66 @@ function computerChoice() {
 //Who's the winner!! Computer Vs Human
 function whosTheWinner() {
     let computerChoiceValue = computerChoice();
+    let userWins = false;''
+    console.log("computer selectect: "+ computerChoiceValue)
+
+    if (userChoice === computerChoiceValue) {
+        console.log("It's a draw")
+
+    } else if ((userChoice === "rock" && computerChoiceValue === "scissors") || (userChoice === "rock" && computerChoiceValue === "lizard")) {
+        userWins = true;
+        console.log("user wins");
+
+    } else if ((userChoice === "paper" && computerChoiceValue === "rock")|| (userChoice === "paper" && computerChoiceValue === "spock")) {
+        userWins = true;
+        console.log("user wins");
+
+    } else if ((userChoice === "scissors" && computerChoiceValue === "lizard") || (userChoice === "scissors" && computerChoiceValue === "paper")) {
+        userWins = true;
+        console.log("user wins");
+
+    } else if ((userChoice === "lizard" && computerChoiceValue === "spock") || (userChoice === "lizard" && computerChoiceValue === "paper")) {
+        userWins = true;
+        console.log("user wins");
+
+    } else if ((userChoice === "spock" && computerChoiceValue === "scissors") || (userChoice === "spock" && computerChoiceValue === "rock")) {
+        userWins = true;
+        console.log("user wins");
+        
+    } else {
+    console.log("computer wins");
+    };
+return userWins;
+
+}
+
+/*
+//Who's the winner!! Computer Vs Human
+function whosTheWinner() {
+    let computerChoiceValue = computerChoice();
     var outcome;
-    var winner;
+    var winner;*/
     
-    console.log("computer selected: "+ computerChoiceValue);
+
+/*
+rock && computerChoice("scissors")
+"Rock crushes scissors"
+
+scissors && computerChoice("rock")
+"Rock crushes scissors"
+
+"Scissors cut Paper"
+
+"Paper covers Rock"
+"Rock crushes Lizard"
+"Lizard poisons Spock"
+"Spock smashes Scissors"
+"Scissors decapitates Lizard"
+"Lizard eats Paper"
+"Paper disproves Spock"
+"Spock vaporises Rock"
+"Rock crushes scissors"
+
 
     // (1) Rock crushes scissors
     if (userChoice === "rock" 
