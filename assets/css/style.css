@@ -131,10 +131,4 @@ element.style {
     color: whitesmoke;
 }
 
-/*Active button*/
-.btn:hover, .btn:active {
-    background-color: black;
-    border-width: 100px;
-    border-color: #ffbd59;
-    border: 10px solid;
-}
+

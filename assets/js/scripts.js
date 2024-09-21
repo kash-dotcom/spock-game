@@ -31,36 +31,54 @@ scissors.addEventListener("click", scissorsSelected);
 lizard.addEventListener("click", lizardSelected);
 spock.addEventListener("click", spockSelected);
 
+//Getting class
+let choiceBtn = document.getElementsByClassName("selection-btn")
+
+
+//Changing colour of buttons once user selects
+function userChoiceBtn() {
+    rock.style.backgroundColor = "black";
+    rock.style.borderStyle = "solid";
+    rock.style.borderWidth = "4px";
+    rock.style.borderColor = "#ffbd59";
+    
+    }
+
 //creating userChoice
 var userChoice;
 function rockSelected() {
     userChoice = "rock";
     console.log("user selected " + userChoice);
-    whosTheWinner();     
+    whosTheWinner(); 
+    userChoiceBtn();  
 }
 
 function paperSelected() {
     userChoice = "paper";
     console.log("user selected " + userChoice);
     whosTheWinner();
+    userChoiceBtn();  
    
 }
 function scissorsSelected() {
     userChoice = "scissors";
     console.log("user selected " + userChoice);
     whosTheWinner();
+    userChoiceBtn();  
     
 }
 function lizardSelected() {
     userChoice = "lizard";
     console.log("user selected " + userChoice);
     whosTheWinner();
+    userChoiceBtn();  
     
 }
 function spockSelected(event) {
     userChoice = "spock";
     console.log("user selected " + userChoice);
     whosTheWinner();
+    userChoiceBtn();  
    
 }
 
@@ -218,6 +236,7 @@ function whosTheWinner() {
         return outcome + "<br>" + result; 
     } 
 };
+
 
 let outcome = document.getElementById("outcome")
 
