@@ -1,6 +1,10 @@
 // Get the modal
-var modal = document.getElementById("instruction-modal");
 
+function toggle (){
+    var modal = document.getElementById("fa-circle-question");
+    modal.classList.toggle('active')
+
+}
 // Instruction question mark
 var btn = document.getElementsByClassName("fa-circle-question")
 
@@ -75,14 +79,16 @@ function whosTheWinner() {
     let computerChoiceValue = computerChoice();
     let userWins = false;
     let computerWins = false;
+    let outcome;
     console.log("computer selected: "+ computerChoiceValue)
 
     // (1) Rock crushes scissors
     if (userChoice === "rock" 
             && computerChoiceValue === "scissors") {
                     userWins = true;
-                    console.log("You win!");
-                    console.log("Rock crushes scissors");
+                    outcome = "Rock crushes scissors";
+                    return "You win!";
+                    
 
     } else if (computerChoiceValue === "rock" 
                 && userChoice === "scissors"){
@@ -193,20 +199,29 @@ function whosTheWinner() {
             computerWins = true;
             console.log("Computer win!");  
             console.log("Lizard eats Paper"); 
-      } else {
-        console.log("It's a draw")
-    }  
-
-}         
-/*
+        
         // (10) Spock vaporises Rock
-        } if (userChoice === "spock" && computerChoiceValue === "rock") 
+    } else if (userChoice === "spock" 
+        && computerChoiceValue === "rock") {
             userWins = true;
-            //alert("You win!");
-            console.log("user wins");
-            if ((userChoice || computerChoiceValue === "spock") && (userChoice || computerChoiceValue === "rock")) {
-              console.log("Spock vaporises Rock")
-        }
+            console.log("You win!");
+            console.log("Spock vaporises Rock");
+
+    } else if (computerChoiceValue === "spock"
+        && userChoice === "rock") {
+            computerWins = true;
+            console.log("Computer win!");  
+            console.log("Spock vaporises Rock"); 
+    } else {
+        console.log("It's a draw")
+    } 
+
+}
+
+
+       
+/*
+
         // Draw
         if (userChoice === computerChoiceValue) {
             //alert("It's a draw")

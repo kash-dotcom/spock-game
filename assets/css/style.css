@@ -58,6 +58,11 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+.modal-background#modal.active {
+    filter: blur(20px);
+}
+
+
 element.style {
     margin-left: 1%;
 }
