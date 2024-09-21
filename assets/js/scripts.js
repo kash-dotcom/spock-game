@@ -34,32 +34,31 @@ spock.addEventListener("click", spockSelected);
 //creating userChoice
 var userChoice;
 function rockSelected() {
-    userChoice = "rock"
+    userChoice = "rock";
     console.log("user selected " + userChoice);
-    whosTheWinner();    
-    
+    whosTheWinner();     
 }
 
 function paperSelected() {
-    userChoice = "paper"
+    userChoice = "paper";
     console.log("user selected " + userChoice);
     whosTheWinner();
    
 }
 function scissorsSelected() {
-    userChoice = "scissors"
+    userChoice = "scissors";
     console.log("user selected " + userChoice);
     whosTheWinner();
     
 }
 function lizardSelected() {
-    userChoice = "lizard"
+    userChoice = "lizard";
     console.log("user selected " + userChoice);
     whosTheWinner();
     
 }
 function spockSelected(event) {
-    userChoice = "spock"
+    userChoice = "spock";
     console.log("user selected " + userChoice);
     whosTheWinner();
    
@@ -77,149 +76,154 @@ function computerChoice() {
 //Who's the winner!! Computer Vs Human
 function whosTheWinner() {
     let computerChoiceValue = computerChoice();
-    let userWins = false;
-    let computerWins = false;
-    let outcome;
-    console.log("computer selected: "+ computerChoiceValue)
+    var outcome;
+    var winner;
+    
+    console.log("computer selected: "+ computerChoiceValue);
 
     // (1) Rock crushes scissors
     if (userChoice === "rock" 
-            && computerChoiceValue === "scissors") {
-                    userWins = true;
-                    outcome = "Rock crushes scissors";
-                    return "You win!";
+        && computerChoiceValue === "scissors") {
+            outcome = "Rock crushes scissors";
+            winner = "You win!";
+            return winner + '<br>' + outcome;
                     
 
     } else if (computerChoiceValue === "rock" 
-                && userChoice === "scissors"){
-                    computerWins = true;
-                    console.log("Computer win!");
-                    console.log("Rock crushes scissors");
+        && userChoice === "scissors"){                
+            outcome = "Rock crushes scissors";
+            winner = "Computer win!";
+            return winner + '<br>' + outcome;
 
     //(2) Rock crushes Lizard
     } else if (userChoice === "rock" 
-                && computerChoiceValue === "lizard") {
-                    userWins = true;
-                    console.log("You win!");
-                    console.log("Rock crushes Lizard");
+        && computerChoiceValue === "lizard") {
+            outcome = "Rock crushes Lizard";
+            winner = "You win!";
+            return winner + '<br>' + outcome;
 
     } else if (computerChoiceValue === "rock" 
-                && userChoice === "lizard") {
-                    computerWins = true;
-                    console.log("Computer win!");    
-                    console.log("Rock crushes Lizard");
+        && userChoice === "lizard") {
+            outcome = "Rock crushes Lizard";
+            winner = "Computer win!"; 
+            return winner + '<br>' + outcome; 
 
     //(3) Paper covers Rock
     } else if (userChoice === "paper" 
-                && computerChoiceValue === "rock") {
-                    userWins = true;
-                    console.log("You win!");
-                    console.log("Paper covers Rock");
+        && computerChoiceValue === "rock") {
+            outcome = "Paper covers Rock";
+            winner = "You win!";
+            return winner + '<br>' + outcome;
 
     } else if (computerChoiceValue === "paper" 
-                && userChoice === "rock") {
-                    computerWins = true;
-                    console.log("Computer win!");  
-                    console.log("Paper covers Rock");
+        && userChoice === "rock") {
+            winner = "Computer win!"; 
+            outcome = "Paper covers Rock";
+            return winner + '<br>' + outcome;  
 
     // (4)Paper disproves Spock
     } else if (userChoice === "paper" 
-                && computerChoiceValue === "spock") {     
-                    userWins = true;
-                    console.log("You win!");
-                    console.log("Paper disproves Spock");
+        && computerChoiceValue === "spock") {     
+            winner = "You win!";
+            outcome = "Paper disproves Spock";
+            return winner + '<br>' + outcome;
 
     } else if (computerChoiceValue  === "paper" 
-                && userChoice === "spock") {
-                    computerWins = true;
-                    console.log("Computer win!");  
-                    console.log("Paper disproves Spock");
+        && userChoice === "spock") {
+            outcome = "Paper disproves Spock";
+            winner = "Computer win!";
+            return winner + '<br>' + outcome;
 
     // (5) Scissors decapitates Lizard
     } else if (userChoice === "scissors" 
-                && computerChoiceValue === "lizard")  {
-                    userWins = true;
-                    console.log("You win!");
-                    console.log("Scissors decapitates Lizard");
+        && computerChoiceValue === "lizard")  {
+            outcome = "Scissors decapitates Lizard";
+            winner = "You win!";
+            return winner + '<br>' + outcome;
             
     } else if (computerChoiceValue ==="scissors" 
-                && userChoice === "lizard") {
-                    computerWins = true;
-                    console.log("Computer win!");  
-                    console.log("Scissors decapitates Lizard");
+        && userChoice === "lizard") {
+            outcome = "Scissors decapitates Lizard";
+            winner = "Computer win!"; 
+            return winner + '<br>' + outcome;
 
     // (6) Scissors cut Paper
     } else if (userChoice === "scissors" 
-                && computerChoiceValue === "paper") {
-                    userWins = true;
-                    console.log("You win!");            
-                    console.log("Scissors cut Paper")
+        && computerChoiceValue === "paper") {        
+            outcome = "Scissors cut Paper";
+            winner = "You win!";
+            return winner + '<br>' + outcome;
 
     } else if (computerChoiceValue === "scissors"
-                && userChoice === "paper"){
-                    computerWins = true;
-                    console.log("Computer win!");  
-                    console.log("Scissors cut Paper");
+        && userChoice === "paper"){
+            outcome = "Scissors cut Paper";
+            winner = "Computer win!";
+            return winner + '<br>' + outcome;  
 
     // (7) Lizard poisons Spock
     }  else if (userChoice === "lizard" 
-                && computerChoiceValue === "spock") {
-                    userWins = true;
-                    console.log("You win!");
-                    console.log("Lizard poisons Spock");
+        && computerChoiceValue === "spock") {
+            outcome = "Lizard poisons Spock";
+            winner = "You win!";
+            return winner + '<br>' + outcome;
         
     } else if (computerChoiceValue === "lizard"
-                && userChoice === "spock"){
-                    computerWins = true;
-                    console.log("Computer win!");  
-                    console.log("Lizard poisons Spock");
+        && userChoice === "spock"){
+            outcome = "Lizard poisons Spock";
+            winner = "Computer win!";
+            return winner + '<br>' + outcome;  
 
     // (8) Spock smashes Scissors
     } else if (userChoice === "spock" 
-                && computerChoiceValue === "scissors") {
-                    userWins = true;
-                    console.log("You win!");
-                    console.log("Spock smashes Scissors");
+        && computerChoiceValue === "scissors") {
+            outcome = "Spock smashes Scissors";
+            winner = "You win!";
+            return winner + '<br>' + outcome;
 
     } else if (computerChoiceValue === "spock"
-                && userChoice === "scissors"){
-                    computerWins = true;
-                    console.log("Computer win!");  
-                    console.log("Spock smashes Scissors");             
+        && userChoice === "scissors") { 
+            outcome = "Spock smashes Scissors";  
+            winner = "Computer win!";
+            return winner + '<br>' + outcome;        
     
         // (9) Lizard eats Paper
     } else if (userChoice === "lizard" 
         && computerChoiceValue === "paper") {
-            userWins = true;
-            console.log("You win!");
-            console.log("Lizard eats Paper");
+            outcome = "Lizard eats Paper";
+            winner = "You win!";
+            return winner + '<br>' + outcome;
 
     } else if (computerChoiceValue === "lizard"
         && userChoice === "paper"){
-            computerWins = true;
-            console.log("Computer win!");  
-            console.log("Lizard eats Paper"); 
+            outcome = "Lizard eats Paper"; 
+            winner = "Computer win!";
+            return winner + '<br>' + outcome;
         
         // (10) Spock vaporises Rock
     } else if (userChoice === "spock" 
         && computerChoiceValue === "rock") {
-            userWins = true;
-            console.log("You win!");
-            console.log("Spock vaporises Rock");
+            outcome = "Spock vaporises Rock";
+            winner = "You win!";
+            return winner + '<br>' + outcome;
 
     } else if (computerChoiceValue === "spock"
-        && userChoice === "rock") {
-            computerWins = true;
-            console.log("Computer win!");  
-            console.log("Spock vaporises Rock"); 
+        && userChoice === "rock") {          
+            outcome = "Spock vaporises Rock"; 
+            winner = "Computer win!";
+            return winner + '<br>' + outcome;
+
     } else {
-        console.log("It's a draw")
+        outcome ="It's a draw";
+        result = "Try again";
+        return outcome + "<br>" + result; 
     } 
+};
 
-}
+let outcome = document.getElementById("outcome")
 
-
-       
+outcome.innerHTML=  `
+    <h1> ${whosTheWinner()}</h1>`;
+     
 /*
 
         // Draw
