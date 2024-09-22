@@ -16,6 +16,7 @@ btn.onclick = function () {
 rock.style.backgroudColor = "black"; 
 */
 
+
 // userChoice - link to ID
 let rock =  document.getElementById("rock");
 let paper = document.getElementById("paper");
@@ -31,44 +32,12 @@ scissors.addEventListener("click", scissorsSelected);
 lizard.addEventListener("click", lizardSelected);
 spock.addEventListener("click", spockSelected);
 
-
-
-// Toggle visibility of the Rock Element
-//onclick hide and show  https://www.youtube.com/watch?v=-oQnDrNzTTA
-//https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
-//https://www.washington.edu/accesscomputing/webd2/student/unit5/module2/lesson5.html
-//showing user selection
- function userClick() {
-    var choiceBtn = document.getElementsByClassName("user-selection");
-
-    var displaySettings = choiceBtn[0].style.visibility;
-
-    if(displaySettings == "hidden") {
-        choiceBtn[0].style.visibility = "visible";
-    } else {
-        choiceBtn[0].style.visibility = "hidden";
-    }
- }
-    
-
-
-
-/*
- //iterating through loop https://stackoverflow.com/questions/39452193/loop-through-array-and-add-event-listener-click-to-each
- // create an array - https://www.w3schools.com/js/js_arrays.asp
- 
- const userMarker = document.getElementsByClassName("user-selection"); 
-
- console.log(userMarker);
- /*
- userMarker.forEach(function) {
-    userMarker.addEventListener("click", )
-       
-
-    };
-
-*/
-
+// Image shown when user selects 
+let userChoiceRock = document.getElementById("user-img-rock");
+let userChoicePaper = document.getElementById("user-img-paper");
+let userChoiceScissors = document.getElementById("user-img-scissors");
+let userChoiceLizard = document.getElementById("user-img-lizard");
+let userChoiceSpock = document.getElementById("user-img-spock");
 
 
 //creating userChoice
@@ -77,6 +46,7 @@ function rockSelected() {
     userChoice = "rock";
     console.log("user selected " + userChoice);
     whosTheWinner(); 
+    userChoiceRock.style.display = "block";
   
 }
 
@@ -84,6 +54,7 @@ function paperSelected() {
     userChoice = "paper";
     console.log("user selected " + userChoice);
     whosTheWinner();
+    userChoicePaper.style.display = "block";
     
    
 }
@@ -91,22 +62,23 @@ function scissorsSelected() {
     userChoice = "scissors";
     console.log("user selected " + userChoice);
     whosTheWinner();
-    
+    userChoiceScissors.style.display = "block";
     
 }
 function lizardSelected() {
     userChoice = "lizard";
     console.log("user selected " + userChoice);
     whosTheWinner();
+    userChoiceLizard.style.display = "block";
     
     
 }
-function spockSelected(event) {
+function spockSelected() {
     userChoice = "spock";
     console.log("user selected " + userChoice);
     whosTheWinner();
- 
-   
+    userChoiceSpock.style.display = "block";
+  
 }
 
 //creating computerChoice - adpated from - https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/ - 
@@ -121,11 +93,11 @@ function computerChoice() {
 //Who's the winner!! Computer Vs Human
 function whosTheWinner() {
     let computerChoiceValue = computerChoice();
-    let userWins = false;''
-    console.log("computer selectect: "+ computerChoiceValue)
+    let userWins = false;
+    console.log("computer selectect: "+ computerChoiceValue);
 
     if (userChoice === computerChoiceValue) {
-        console.log("It's a draw")
+        console.log("It's a draw");
 
     } else if ((userChoice === "rock" && computerChoiceValue === "scissors") || (userChoice === "rock" && computerChoiceValue === "lizard")) {
         userWins = true;
@@ -149,10 +121,113 @@ function whosTheWinner() {
         
     } else {
     console.log("computer wins");
-    };
-return userWins;
+    }
 
+//computer selection
+
+if (computerChoiceValue === "rock") {
+    robotChoiceRock.style.display = "block";
 }
+
+else if (computerChoiceValue === "paper") {
+    robotChoicePaper.style.display = "block";
+
+} else if (computerChoiceValue === "scissors") {
+    robotChoiceScissors.style.display = "block";
+} 
+
+else if (computerChoiceValue === "lizard") {
+    robotChoiceLizard.style.display = "block";
+} 
+
+else if (computerChoiceValue === "spock") {
+    robotChoiceSpock.style.display = "block";
+}
+return userWins;
+}
+
+// Image shown when computer selects 
+let robotChoiceRock = document.getElementById("robot-img-rock");
+let robotChoicePaper = document.getElementById("robot-img-paper");
+let robotChoiceScissors = document.getElementById("robot-img-scissors");
+let robotChoiceLizard = document.getElementById("robot-img-lizard");
+let robotChoiceSpock = document.getElementById("robot-img-spock");
+
+/*
+if (userChoice === "rock") {
+    userChoiceRock.style.display = "block";
+}
+
+else if (userChoice === "paper") {
+    userChoicePaper.style.display = "block";
+
+} else if (userChoice === "scissors") {
+    userChoiceScissors.style.display = "block";
+} 
+
+else if (userChoice === "lizard") {
+    userChoiceLizard.style.display = "block";
+} 
+
+else if (userChoice === "spock") {
+    userChoiceSpock.style.display = "block";
+}
+// Toggle visibility of the Rock Element
+//onclick hide and show  https://www.youtube.com/watch?v=-oQnDrNzTTA
+//https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
+//https://www.washington.edu/accesscomputing/webd2/student/unit5/module2/lesson5.html
+//showing user selection
+
+/*
+ function userClick() {
+    var choiceBtn = document.getElementsByClassName("user-selection");
+    showUser = document.getElementById(showUser())
+    console.log(showUser)
+
+    var displaySettings = choiceBtn[0].style.visibility;
+
+    if(displaySettings == "hidden") {
+        choiceBtn[0].style.visibility = "visible";
+    } else {
+        choiceBtn[0].style.visibility = "hidden";
+    }
+ }*/
+
+
+
+
+
+ /*
+choiceBtn.forEach(choiceBtn => {
+    choiceBtn.addEventListener("click", () => {
+        showUser
+    }
+    )
+})
+
+
+
+ // taking and removing class https://stackoverflow.com/questions/15843581/how-to-correctly-iterate-through-getelementsbyclassname
+ 
+
+ // toggle between different elements hidding and showing them https://stackoverflow.com/questions/38958854/how-to-toggle-off-an-element-when-another-element-is-activated
+
+/*
+ //iterating through loop https://stackoverflow.com/questions/39452193/loop-through-array-and-add-event-listener-click-to-each
+ // create an array - https://www.w3schools.com/js/js_arrays.asp
+ 
+ const userMarker = document.getElementsByClassName("user-selection"); 
+
+ console.log(userMarker);
+ /*
+ userMarker.forEach(function) {
+    userMarker.addEventListener("click", )
+       
+
+    };
+
+*/
+
 
 /*
 //Who's the winner!! Computer Vs Human

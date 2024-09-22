@@ -95,6 +95,7 @@ element.style {
 #selection {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .selection-btn {
@@ -140,4 +141,12 @@ element.style {
 /* visability hidden onload https://www.reddit.com/r/learnjavascript/comments/aw5l96/how_do_i_change_the_display_or_visibility/ */
 .user-selection {
     visibility: hidden;
+}
+
+#user-choice-img > i {
+    display: none;
+}
+
+#robot-choice-img > i {
+    display: none;
 }
