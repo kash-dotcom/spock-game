@@ -82,11 +82,12 @@ element.style {
 } 
 
 .fa-circle-question {
-    color: aliceblue;
+    color: black;
     z-index: 10;
     font-size: 30px;
     padding: 0 0 0 10px;
     position: fixed;
+    display: none;
 }
 
 
@@ -129,14 +130,6 @@ element.style {
     border: none;
 }
 
-.robots-choice, .user-selction {
-    color: black;
-}
-
-.user {
-    padding-bottom: 14px;
-}
-
 
 /* visability hidden onload https://www.reddit.com/r/learnjavascript/comments/aw5l96/how_do_i_change_the_display_or_visibility/ */
 .user-selection {
@@ -150,3 +143,73 @@ element.style {
 #robot-choice-img > i {
     display: none;
 }
+
+
+/*Sofa styling*/
+#sofa {
+    display: flex;
+    justify-content: center;
+}
+
+.fa-couch:before {
+    content: "\f4b8";
+    font-size: 229px;
+    color: #a54114;
+}
+
+#choice-img {
+    display: flex;
+    justify-content: space-around;
+}
+
+#user-choice-img, #robot-choice-img {
+    display: inline-flex;
+    justify-content: center;
+
+}
+#robot-choice {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+#user-choice{
+display: flex;
+flex-direction: row-reverse;
+align-items: baseline;
+padding-right: 29px;
+
+}
+
+#user-choice-title {
+    padding-right: 29px;
+}
+
+.selected {
+    color: black;
+}
+
+/* games area outcomes
+.selected-rock {
+    background-color: #4e4577;
+    border: none;
+}
+
+.selected-paper {
+    background-color: #ffbd59;
+    border: none;
+}
+
+.selected-scissors {
+    background-color: #a21c16 ;
+    border: none;
+}
+
+.selected-lizard {
+    background-color: #04814a;
+    border: none;
+}
+
+.selected-spock {
+    background-color: #0a66bb;
+    border: none;
+}*/

@@ -22,12 +22,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
 
-
-
 </head>
 <body>
     <div id="instructions-btn">
-        <button onclick="toggle()"><i class="fa-solid fa-circle-question"></i></button>   
+        <button alt="gameplay instructions" onclick="toggle()"><i class="fa-solid fa-circle-question"></i></button>   
     </div>
 
     <div id="heading">
@@ -39,76 +37,74 @@
         <h2>Spock</h2>
     </div>
 <div id="games-area">
-    <div id="sofa"><i class="fa-solid fa-couch"></i></div>
-
+    <div id="sofa">
+        <i class="fa-solid fa-couch"></i>
+    </div>
+    <div id="choice-img">
         <div id="user-choice">
             <div id="user-choice-img">
-                <i id="user-img-rock" class="fa-solid fa-hand-back-fist"></i>
-                <i id="user-img-paper" class="fa-solid fa-hand"></i>
-                <i id="user-img-scissors" class="fa-solid user fa-hand-scissors"></i>
-                <i id="user-img-lizard" class="fa-solid fa-hand-lizard"></i>
-                <i id="user-img-spock" class="fa-solid fa-hand-spock"></i>
-        </div>
-            <h2 id="user-choice-title">Player</div>
+                <i id="user-img-rock" alt="select rock" class="fa-solid btn fa-hand-back-fist selected"></i>
+                <i id="user-img-paper" alt="select paper" class="fa-solid btn fa-hand selected"></i>
+                <i id="user-img-scissors"alt="select scissors" class="fa-solid btn user fa-hand-scissors selected"></i>
+                <i id="user-img-lizard"alt="select lizard"   class="fa-solid btn fa-hand-lizard selected"></i>
+                <i id="user-img-spock" alt="select spock" class="fa-solid btn fa-hand-spock selected"></i>
+            </div>
+            <h2 id="user-choice-title">Player</h2>
 
+        </div>
+
+        <div id="outcome-score">
+            <h1 id="outcome">Outcome</h1>
+            
+            <div id="score">
+                
+                    <p class="scores-player">Player <span id="score">0</span></p>
+                    <p class="scores-robot">Robot<span id="incorrect">0</span></p>  
+    
+            </div>
         </div>
 
         <div id="robot-choice">
             <div id="robot-choice-img">
-                <i id="robot-img-rock" class="fa-solid fa-hand-back-fist"></i>
-                <i id="robot-img-paper" class="fa-solid fa-hand"></i>
-                <i id="robot-img-scissors" class="fa-solid user fa-hand-scissors"></i>
-                <i id="robot-img-lizard" class="fa-solid fa-hand-lizard"></i>
-                <i id="robot-img-spock" class="fa-solid fa-hand-spock"></i>    
+                <i id="robot-img-rock" class="fa-solid btn fa-hand-back-fist selected"></i>
+                <i id="robot-img-paper" class="fa-solid btn fa-hand selected"></i>
+                <i id="robot-img-scissors" class="fa-solid btn user fa-hand-scissors selected"></i>
+                <i id="robot-img-lizard" class="fa-solid btn fa-hand-lizard selected"></i>
+                <i id="robot-img-spock" class="fa-solid btn fa-hand-spock selected"></i>    
             </div>
 
-            <h2 id="computer-choice-title">Computer</div>
+            <h2 id="computer-choice-title">Computer</h2>
         </div>
 
     </div>
 </div>
 
-
-
-
-
-
-
-   <!-- onclick hide and show  https://www.youtube.com/watch?v=-oQnDrNzTTA -->
+   <!-- onclick hide and show https://www.youtube.com/watch?v=-oQnDrNzTTA -->
     <div id="selection" >
         <div class="rock-container selection-btn" >
-            <div class="user-selection" id="showUser('rock')"><i class="fa-solid user fa-person-rays"></i></div>
-            <button id="rock" class="btn"><i class="fa-solid fa-hand-back-fist"></i></button>
+            <button id="rock" class="btn" alt="select rock"><i class="fa-solid fa-hand-back-fist"></i></button>
             <h3>Rock</h3>
-            <div class="robots-choice"><i class="fa-solid fa-robot"></i></div>
         </div>
 
         <div class="paper-container selection-btn">
-            <div class="user-selection" id="showUser('paper')"><i class="fa-solid user fa-person-rays"></i></div>
-            <button id="paper" class="btn"><i class="fa-solid fa-hand"></i></button>
+            <button id="paper" class="btn" alt="select paper"><i class="fa-solid fa-hand"></i></button>
             <h3>Paper</h3>
-            <div class="robots-choice"><i class="fa-solid fa-robot"></i></div>
         </div>
 
         <div class="scissors-container selection-btn">
-            <div class="user-selection" id="showUser('scissors')"><i class="fa-solid user fa-person-rays"></i></div>
-            <button id="scissors" class=" btn"><i class="fa-solid user fa-hand-scissors"></i></button>
+            <button id="scissors" class=" btn"alt="select scissors"><i class="fa-solid user fa-hand-scissors"></i></button>
             <h3>Scissors</h3>
-            <div class="robots-choice"><i class="fa-solid fa-robot"></i></div>
         </div>
         
-        <div class="lizard-container selection-btn">
-            <div class="user-selection" id="showUser('lizard')"><i class="fa-solid user fa-person-rays"></i></div>
-            <button id="lizard" class="btn"><i class="fa-solid fa-hand-lizard"></i></button>
+        <div class="lizard-container selection-btn"> 
+            <button id="lizard" class="btn"alt="select lizard"><i class="fa-solid fa-hand-lizard"></i></button>
             <h3>Lizard</h3>
-            <div class="robots-choice"><i class="fa-solid fa-robot"></i></div>
+
         </div>
 
-        <div class="spock-container selection-btn">
-            <div class="user-selection" id="showUser('spock')"><i class="fa-solid user fa-person-rays"></i></div>
-            <button id="spock" class="btn"><i class="fa-solid fa-hand-spock"></i></button>
+        <div class="spock-container selection-btn">    
+            <button id="spock" class="btn"alt="select spock"><i class="fa-solid fa-hand-spock"></i></button>
             <h3>Spock</h3>
-            <div class="robots-choice"><i class="fa-solid fa-robot"></i></div>
         </div>
 
     </div>
@@ -145,21 +141,7 @@
         </div>
     </div>
 
-    <div id="outcome-score">
-        <div id="outcome">
-        
-
-        </div>
-
-        <div id="score">
-            <div id="score-container">
-
-
-            </div>
-
-
-
-        </div>
+    
 
 
 

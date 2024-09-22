@@ -47,6 +47,10 @@ function rockSelected() {
     console.log("user selected " + userChoice);
     whosTheWinner(); 
     userChoiceRock.style.display = "block";
+    userChoicePaper.style.display = "none";
+    userChoiceScissors.style.display = "none"
+    userChoiceLizard.style.display = "none";
+    userChoiceSpock.style.display = "none";
   
 }
 
@@ -55,6 +59,10 @@ function paperSelected() {
     console.log("user selected " + userChoice);
     whosTheWinner();
     userChoicePaper.style.display = "block";
+    userChoiceRock.style.display = "none";
+    userChoiceScissors.style.display = "none"
+    userChoiceLizard.style.display = "none";
+    userChoiceSpock.style.display = "none";
     
    
 }
@@ -63,6 +71,10 @@ function scissorsSelected() {
     console.log("user selected " + userChoice);
     whosTheWinner();
     userChoiceScissors.style.display = "block";
+    userChoiceRock.style.display = "none";
+    userChoicePaper.style.display = "none";
+    userChoiceLizard.style.display = "none";
+    userChoiceSpock.style.display = "none";
     
 }
 function lizardSelected() {
@@ -70,6 +82,10 @@ function lizardSelected() {
     console.log("user selected " + userChoice);
     whosTheWinner();
     userChoiceLizard.style.display = "block";
+    userChoiceRock.style.display = "none";
+    userChoicePaper.style.display = "none";
+    userChoiceScissors.style.display = "none"
+    userChoiceSpock.style.display = "none";
     
     
 }
@@ -78,6 +94,10 @@ function spockSelected() {
     console.log("user selected " + userChoice);
     whosTheWinner();
     userChoiceSpock.style.display = "block";
+    userChoiceRock.style.display = "none";
+    userChoicePaper.style.display = "none";
+    userChoiceScissors.style.display = "none"
+    userChoiceLizard.style.display = "none";
   
 }
 
@@ -94,10 +114,12 @@ function computerChoice() {
 function whosTheWinner() {
     let computerChoiceValue = computerChoice();
     let userWins = false;
-    console.log("computer selectect: "+ computerChoiceValue);
+    
+    console.log("computer selected: "+ computerChoiceValue);
 
     if (userChoice === computerChoiceValue) {
         console.log("It's a draw");
+     
 
     } else if ((userChoice === "rock" && computerChoiceValue === "scissors") || (userChoice === "rock" && computerChoiceValue === "lizard")) {
         userWins = true;
@@ -105,53 +127,165 @@ function whosTheWinner() {
 
     } else if ((userChoice === "paper" && computerChoiceValue === "rock")|| (userChoice === "paper" && computerChoiceValue === "spock")) {
         userWins = true;
+        verseOutcome(); 
         console.log("user wins");
 
     } else if ((userChoice === "scissors" && computerChoiceValue === "lizard") || (userChoice === "scissors" && computerChoiceValue === "paper")) {
         userWins = true;
+        verseOutcome();
+     
         console.log("user wins");
 
     } else if ((userChoice === "lizard" && computerChoiceValue === "spock") || (userChoice === "lizard" && computerChoiceValue === "paper")) {
         userWins = true;
+        verseOutcome(); 
+      
         console.log("user wins");
 
     } else if ((userChoice === "spock" && computerChoiceValue === "scissors") || (userChoice === "spock" && computerChoiceValue === "rock")) {
         userWins = true;
+        verseOutcome();
+      
         console.log("user wins");
         
     } else {
     console.log("computer wins");
     }
 
-//computer selection
+    //computer selection - show image
+    if (computerChoiceValue === "rock") {
+        robotChoiceRock.style.display = "block";
+        robotChoicePaper.style.display = "none";
+        robotChoiceScissors.style.display = "none"
+        robotChoiceLizard.style.display = "none";
+        robotChoiceSpock.style.display = "none";
+    }
 
-if (computerChoiceValue === "rock") {
-    robotChoiceRock.style.display = "block";
+    else if (computerChoiceValue === "paper") {
+        robotChoiceRock.style.display = "block";
+        robotChoicePaper.style.display = "none";
+        robotChoiceScissors.style.display = "none"
+        robotChoiceLizard.style.display = "none";
+        robotChoiceSpock.style.display = "none";
+        
+
+    } else if (computerChoiceValue === "scissors") {
+        robotChoiceScissors.style.display = "block";
+        robotChoiceRock.style.display = "none";
+        robotChoicePaper.style.display = "none";
+        robotChoiceLizard.style.display = "none";
+        robotChoiceSpock.style.display = "none";
+    } 
+
+    else if (computerChoiceValue === "lizard") {
+        robotChoiceLizard.style.display = "block";
+        robotChoiceRock.style.display = "none";
+        robotChoicePaper.style.display = "none";
+        robotChoiceScissors.style.display = "none"
+        robotChoiceSpock.style.display = "none";
+    } 
+
+    else if (computerChoiceValue === "spock") {
+        robotChoiceSpock.style.display = "block";
+        robotChoiceRock.style.display = "none";
+        robotChoicePaper.style.display = "none";
+        robotChoiceScissors.style.display = "none"
+        robotChoiceLizard.style.display = "none";
+
+    } 
+
+    return computerChoiceValue;
 }
 
-else if (computerChoiceValue === "paper") {
-    robotChoicePaper.style.display = "block";
+// Reference - needed
+function verseOutcome() {
+    let outcome;
+    const winningCombinations = [
+        ["scissors", "paper"],
+        ["paper", "rock"],
+        ["rock", "lizard"],
+        ["lizard", "spock"],
+        ["spock", "scissors"],
+        ["scissors", "lizard"],
+        ["lizard", "paper"],
+        ["paper", "spock"],
+        ["spock", "rock"],
+        ["rock", "scissors"],
+    
+    ];
+    
+    const winningMessages = [
+        "Scissors cut Paper",
+        "Paper covers Rock",
+        "Rock crushes Lizard",
+        "Lizard poisons Spock",
+        "Spock smashes Scissors",
+        "Scissors decapitates Lizard",
+        "Lizard eats Paper",
+        "Paper disproves Spock",
+        "Spock vaporizes Rock",
+        "Rock crushes scissors",
+    
+    ];
+    
+    for (let i = 0; i < winningCombinations.length; i++) {
+        const [option1, option2] = winningCombinations[i];
+        if ((userChoice === option1 && computerChoiceValue === option2) || (userChoice === option2 && computerChoiceValue === option1)) {
+        outcome = winningMessages[i];
+        break;
+        }
+    }
+    
+    if (outcome === undefined) {
+        if (userChoice === computerChoiceValue) {
+        outcome = "It's a draw";
+        } else {
+        outcome = "unknown";
+        }
+    }
 
-} else if (computerChoiceValue === "scissors") {
-    robotChoiceScissors.style.display = "block";
-} 
-
-else if (computerChoiceValue === "lizard") {
-    robotChoiceLizard.style.display = "block";
-} 
-
-else if (computerChoiceValue === "spock") {
-    robotChoiceSpock.style.display = "block";
 }
+
+//updates the outcome div with the output of the outcome
+
+function message () {
+    
+getElementById("outcome").innerText = `${outcome}`;
+
+
 return userWins;
 }
-
 // Image shown when computer selects 
 let robotChoiceRock = document.getElementById("robot-img-rock");
 let robotChoicePaper = document.getElementById("robot-img-paper");
 let robotChoiceScissors = document.getElementById("robot-img-scissors");
 let robotChoiceLizard = document.getElementById("robot-img-lizard");
 let robotChoiceSpock = document.getElementById("robot-img-spock");
+
+
+//code institute - Love Maths project
+/**
+ * Gets the current score from the DOM and increments it by 1
+ */
+
+let oldScore;
+function incrementScore() {
+    if (userWins = true) {
+    oldScore = parseInt(document.getElementById("scores-player").innerText);
+    document.getElementById("scores-player").innerText = ++oldScore;
+
+    } else { oldScore = parseInt(document.getElementById("scores-robot").innerText);
+    document.getElementById("scores-robot").innerText = ++oldScore;
+
+    }
+}
+
+/**
+ * Gets the current tally of incorrect answers from the DOM and increments it by 1
+ */
+
+
+
 
 /*
 if (userChoice === "rock") {
@@ -453,4 +587,9 @@ if ((userChoice || computerChoiceValue === "rock")&& (userChoice || computerChoi
     console.log("Scissors cut Paper")
     
 }
+    */
+
+    /*
+    if ((userChoice === scissors && computerChoiceValue === "paper") || (userChoice === paper && computerChoiceValue === "paper")) {
+        outcome = "Scissors cut Paper";
     */
