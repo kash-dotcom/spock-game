@@ -35,6 +35,13 @@ body {
 /* ----------------------------------------------------------------------body------------------------------------------------*/
 
 
+/* background https://www.w3schools.com/cssref/css3_pr_background.php*
+
+body {
+    background: url("../images/background.webp") no-repeat fixed;
+}
+*/
+
 /*heading styling*/
 
 #heading {
@@ -135,14 +142,12 @@ element.style {
 .user-selection {
     visibility: hidden;
 }
-
+/*
 #user-choice-img > i {
     display: none;
 }
 
-#robot-choice-img > i {
-    display: none;
-}
+
 
 
 /*Sofa styling*/
@@ -169,12 +174,16 @@ element.style {
 }
 #robot-choice {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: baseline;
+}
+
+#robot-choice-img > i {
+    display: none;
 }
 #user-choice{
 display: flex;
-flex-direction: row-reverse;
+flex-direction: column;
 align-items: baseline;
 padding-right: 29px;
 

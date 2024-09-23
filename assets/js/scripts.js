@@ -40,33 +40,36 @@ let userChoiceLizard = document.getElementById("user-img-lizard");
 let userChoiceSpock = document.getElementById("user-img-spock");
 
 
+
 //creating userChoice
-var userChoice;
 function rockSelected() {
+    let userChoice;
     userChoice = "rock";
     console.log("user selected " + userChoice);
     whosTheWinner(); 
     userChoiceRock.style.display = "block";
     userChoicePaper.style.display = "none";
-    userChoiceScissors.style.display = "none"
+    userChoiceScissors.style.display = "none";
     userChoiceLizard.style.display = "none";
     userChoiceSpock.style.display = "none";
   
 }
 
 function paperSelected() {
+    let userChoice;
     userChoice = "paper";
     console.log("user selected " + userChoice);
     whosTheWinner();
     userChoicePaper.style.display = "block";
     userChoiceRock.style.display = "none";
-    userChoiceScissors.style.display = "none"
+    userChoiceScissors.style.display = "none";
     userChoiceLizard.style.display = "none";
     userChoiceSpock.style.display = "none";
     
    
 }
 function scissorsSelected() {
+    let userChoice;
     userChoice = "scissors";
     console.log("user selected " + userChoice);
     whosTheWinner();
@@ -78,18 +81,20 @@ function scissorsSelected() {
     
 }
 function lizardSelected() {
+    let userChoice;
     userChoice = "lizard";
     console.log("user selected " + userChoice);
     whosTheWinner();
     userChoiceLizard.style.display = "block";
     userChoiceRock.style.display = "none";
     userChoicePaper.style.display = "none";
-    userChoiceScissors.style.display = "none"
+    userChoiceScissors.style.display = "none";
     userChoiceSpock.style.display = "none";
     
     
 }
 function spockSelected() {
+    let userChoice;
     userChoice = "spock";
     console.log("user selected " + userChoice);
     whosTheWinner();
@@ -110,10 +115,13 @@ function computerChoice() {
     return optionsArray[randomChoice];
 }
 
-//Who's the winner!! Computer Vs Human
+/**
+* Who's the winner!! Computer Vs Human
+ */
 function whosTheWinner() {
     let computerChoiceValue = computerChoice();
     let userWins = false;
+    let userChoice;
     
     console.log("computer selected: "+ computerChoiceValue);
 
@@ -123,79 +131,93 @@ function whosTheWinner() {
 
     } else if ((userChoice === "rock" && computerChoiceValue === "scissors") || (userChoice === "rock" && computerChoiceValue === "lizard")) {
         userWins = true;
+        incrementScore();
         console.log("user wins");
 
     } else if ((userChoice === "paper" && computerChoiceValue === "rock")|| (userChoice === "paper" && computerChoiceValue === "spock")) {
         userWins = true;
         verseOutcome(); 
+        incrementScore();
         console.log("user wins");
 
     } else if ((userChoice === "scissors" && computerChoiceValue === "lizard") || (userChoice === "scissors" && computerChoiceValue === "paper")) {
         userWins = true;
         verseOutcome();
-     
+        incrementScore();
         console.log("user wins");
 
     } else if ((userChoice === "lizard" && computerChoiceValue === "spock") || (userChoice === "lizard" && computerChoiceValue === "paper")) {
         userWins = true;
         verseOutcome(); 
-      
+        incrementScore();
         console.log("user wins");
 
     } else if ((userChoice === "spock" && computerChoiceValue === "scissors") || (userChoice === "spock" && computerChoiceValue === "rock")) {
         userWins = true;
         verseOutcome();
-      
+        incrementScore();
         console.log("user wins");
         
     } else {
     console.log("computer wins");
     }
+    computerSelectionImg(computerChoiceValue);
 
-    //computer selection - show image
-    if (computerChoiceValue === "rock") {
-        robotChoiceRock.style.display = "block";
-        robotChoicePaper.style.display = "none";
-        robotChoiceScissors.style.display = "none"
-        robotChoiceLizard.style.display = "none";
-        robotChoiceSpock.style.display = "none";
-    }
-
-    else if (computerChoiceValue === "paper") {
-        robotChoiceRock.style.display = "block";
-        robotChoicePaper.style.display = "none";
-        robotChoiceScissors.style.display = "none"
-        robotChoiceLizard.style.display = "none";
-        robotChoiceSpock.style.display = "none";
-        
-
-    } else if (computerChoiceValue === "scissors") {
-        robotChoiceScissors.style.display = "block";
-        robotChoiceRock.style.display = "none";
-        robotChoicePaper.style.display = "none";
-        robotChoiceLizard.style.display = "none";
-        robotChoiceSpock.style.display = "none";
-    } 
-
-    else if (computerChoiceValue === "lizard") {
-        robotChoiceLizard.style.display = "block";
-        robotChoiceRock.style.display = "none";
-        robotChoicePaper.style.display = "none";
-        robotChoiceScissors.style.display = "none"
-        robotChoiceSpock.style.display = "none";
-    } 
-
-    else if (computerChoiceValue === "spock") {
-        robotChoiceSpock.style.display = "block";
-        robotChoiceRock.style.display = "none";
-        robotChoicePaper.style.display = "none";
-        robotChoiceScissors.style.display = "none"
-        robotChoiceLizard.style.display = "none";
-
-    } 
-
-    return computerChoiceValue;
+    return {
+        userWins: userWins,
+        computerChoiceValue: computerChoiceValue,
+    };
 }
+console.log(computerChoiceValue);
+
+// Image shown when computer selects 
+let robotChoiceRock = document.getElementById("robot-img-rock");
+let robotChoicePaper = document.getElementById("robot-img-paper");
+let robotChoiceScissors = document.getElementById("robot-img-scissors");
+let robotChoiceLizard = document.getElementById("robot-img-lizard");
+let robotChoiceSpock = document.getElementById("robot-img-spock");
+let computerChoiceValue;
+console.log(computerChoiceValue)
+/** 
+*computer selection - show image
+*/
+function computerSelectionImg(){
+   
+    switch(computerChoiceValue) {
+        case "rock":
+            robotChoiceRock.style.display = "block";
+            break;
+        case "paper":
+            robotChoicePaper.style.display = "block";
+            break;
+        case "scissors":
+            robotChoiceScissors.style.display = "block";
+            break;
+        case "lizard":
+            robotChoiceLizard.style.display = "block";
+            break;
+        case "spock":
+            robotChoiceSpock.style.display = "block";
+            break;
+    } 
+    console.log(computerChoiceValue)
+}
+
+    let oldScore;
+    function incrementScore() {
+    if (userWins === true) {
+    oldScore = parseInt(document.getElementById("scores-player").innerText);
+    document.getElementById("scores-player").innerText = ++oldScore;
+    console.log("Computer +1");
+    console.log(oldScore);
+
+    } else { oldScore = parseInt(document.getElementById("scores-robot").innerText);
+    document.getElementById("scores-robot").innerText = ++oldScore;
+    console.log("Computer +1");
+    console.log(oldScore);
+    }
+}
+
 
 // Reference - needed
 function verseOutcome() {
@@ -243,7 +265,8 @@ function verseOutcome() {
         outcome = "unknown";
         }
     }
-
+console.log(outcome);
+    return outcome;
 }
 
 //updates the outcome div with the output of the outcome
@@ -255,12 +278,8 @@ getElementById("outcome").innerText = `${outcome}`;
 
 return userWins;
 }
-// Image shown when computer selects 
-let robotChoiceRock = document.getElementById("robot-img-rock");
-let robotChoicePaper = document.getElementById("robot-img-paper");
-let robotChoiceScissors = document.getElementById("robot-img-scissors");
-let robotChoiceLizard = document.getElementById("robot-img-lizard");
-let robotChoiceSpock = document.getElementById("robot-img-spock");
+
+
 
 
 //code institute - Love Maths project
@@ -268,17 +287,7 @@ let robotChoiceSpock = document.getElementById("robot-img-spock");
  * Gets the current score from the DOM and increments it by 1
  */
 
-let oldScore;
-function incrementScore() {
-    if (userWins = true) {
-    oldScore = parseInt(document.getElementById("scores-player").innerText);
-    document.getElementById("scores-player").innerText = ++oldScore;
 
-    } else { oldScore = parseInt(document.getElementById("scores-robot").innerText);
-    document.getElementById("scores-robot").innerText = ++oldScore;
-
-    }
-}
 
 /**
  * Gets the current tally of incorrect answers from the DOM and increments it by 1
