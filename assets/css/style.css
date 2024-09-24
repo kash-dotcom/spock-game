@@ -142,12 +142,14 @@ element.style {
 .user-selection {
     visibility: hidden;
 }
-/*
+
 #user-choice-img > i {
     display: none;
 }
 
-
+#robot-choice-img > i {
+    display: none;
+}
 
 
 /*Sofa styling*/
@@ -178,9 +180,7 @@ element.style {
     align-items: baseline;
 }
 
-#robot-choice-img > i {
-    display: none;
-}
+
 #user-choice{
 display: flex;
 flex-direction: column;

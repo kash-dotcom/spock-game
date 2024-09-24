@@ -47,64 +47,67 @@ function rockSelected() {
     userChoice = "rock";
     console.log("user selected " + userChoice);
     whosTheWinner(); 
-    userChoiceRock.style.display = "block";
-    userChoicePaper.style.display = "none";
-    userChoiceScissors.style.display = "none";
-    userChoiceLizard.style.display = "none";
-    userChoiceSpock.style.display = "none";
+        userChoiceRock.style.display = "block";
+        userChoicePaper.style.display = "none";
+        userChoiceScissors.style.display = "none";
+        userChoiceLizard.style.display = "none";
+        userChoiceSpock.style.display = "none";
+    return userChoice
   
 }
-
-function paperSelected() {
-    let userChoice;
-    userChoice = "paper";
-    console.log("user selected " + userChoice);
-    whosTheWinner();
-    userChoicePaper.style.display = "block";
-    userChoiceRock.style.display = "none";
-    userChoiceScissors.style.display = "none";
-    userChoiceLizard.style.display = "none";
-    userChoiceSpock.style.display = "none";
+    function paperSelected() {
+        let userChoice;
+        userChoice = "paper";
+        console.log("user selected " + userChoice);
+        whosTheWinner();
+            userChoicePaper.style.display = "block";
+            userChoiceRock.style.display = "none";
+            userChoiceScissors.style.display = "none";
+            userChoiceLizard.style.display = "none";
+            userChoiceSpock.style.display = "none";
+        return userChoice
     
-   
-}
-function scissorsSelected() {
-    let userChoice;
-    userChoice = "scissors";
-    console.log("user selected " + userChoice);
-    whosTheWinner();
-    userChoiceScissors.style.display = "block";
-    userChoiceRock.style.display = "none";
-    userChoicePaper.style.display = "none";
-    userChoiceLizard.style.display = "none";
-    userChoiceSpock.style.display = "none";
+    }
+    function scissorsSelected() {
+        let userChoice;
+        userChoice = "scissors";
+        console.log("user selected " + userChoice);
+        whosTheWinner();
+            userChoiceScissors.style.display = "block";
+            userChoiceRock.style.display = "none";
+            userChoicePaper.style.display = "none";
+            userChoiceLizard.style.display = "none";
+            userChoiceSpock.style.display = "none";
+        return userChoice
+        
+    }
+    function lizardSelected() {
+        let userChoice;
+        userChoice = "lizard";
+        console.log("user selected " + userChoice);
+        whosTheWinner();
+            userChoiceLizard.style.display = "block";
+            userChoiceRock.style.display = "none";
+            userChoicePaper.style.display = "none";
+            userChoiceScissors.style.display = "none";
+            userChoiceSpock.style.display = "none";
+        return userChoice
+        
+        
+    }
+    function spockSelected() {
+        let userChoice;
+        userChoice = "spock";
+        console.log("user selected " + userChoice);
+        whosTheWinner();
+            userChoiceSpock.style.display = "block";
+            userChoiceRock.style.display = "none";
+            userChoicePaper.style.display = "none";
+            userChoiceScissors.style.display = "none"
+            userChoiceLizard.style.display = "none";
+        return userChoice
     
-}
-function lizardSelected() {
-    let userChoice;
-    userChoice = "lizard";
-    console.log("user selected " + userChoice);
-    whosTheWinner();
-    userChoiceLizard.style.display = "block";
-    userChoiceRock.style.display = "none";
-    userChoicePaper.style.display = "none";
-    userChoiceScissors.style.display = "none";
-    userChoiceSpock.style.display = "none";
-    
-    
-}
-function spockSelected() {
-    let userChoice;
-    userChoice = "spock";
-    console.log("user selected " + userChoice);
-    whosTheWinner();
-    userChoiceSpock.style.display = "block";
-    userChoiceRock.style.display = "none";
-    userChoicePaper.style.display = "none";
-    userChoiceScissors.style.display = "none"
-    userChoiceLizard.style.display = "none";
-  
-}
+    }
 
 //creating computerChoice - adpated from - https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/ - 
 
@@ -159,52 +162,78 @@ function whosTheWinner() {
         console.log("user wins");
         
     } else {
+        computerWins = true;
     console.log("computer wins");
     }
     computerSelectionImg(computerChoiceValue);
 
     return {
+        // reference - problem solving exercise with Gemmini AI that taught me how to return more than one value
+        computerWins: computerWins,
         userWins: userWins,
         computerChoiceValue: computerChoiceValue,
     };
 }
-console.log(computerChoiceValue);
 
-// Image shown when computer selects 
-let robotChoiceRock = document.getElementById("robot-img-rock");
-let robotChoicePaper = document.getElementById("robot-img-paper");
-let robotChoiceScissors = document.getElementById("robot-img-scissors");
-let robotChoiceLizard = document.getElementById("robot-img-lizard");
-let robotChoiceSpock = document.getElementById("robot-img-spock");
-let computerChoiceValue;
-console.log(computerChoiceValue)
 /** 
 *computer selection - show image
 */
 function computerSelectionImg(){
+// Image shown when computer selects 
+    let robotChoiceRock = document.getElementById("robot-img-rock");
+    let robotChoicePaper = document.getElementById("robot-img-paper");
+    let robotChoiceScissors = document.getElementById("robot-img-scissors");
+    let robotChoiceLizard = document.getElementById("robot-img-lizard");
+    let robotChoiceSpock = document.getElementById("robot-img-spock");
+    let computerChoiceValue = computerChoice();
+    console.log(computerChoiceValue)
    
     switch(computerChoiceValue) {
         case "rock":
             robotChoiceRock.style.display = "block";
+            robotChoicePaper.style.display = "none";
+            robotChoiceScissors.style.display = "none";
+            robotChoiceLizard.style.display = "none";
+            robotChoiceSpock.style.display = "none";
             break;
         case "paper":
+            robotChoiceRock.style.display = "none";
             robotChoicePaper.style.display = "block";
+            robotChoiceScissors.style.display = "none";
+            robotChoiceLizard.style.display = "none";
+            robotChoiceSpock.style.display = "none";
             break;
         case "scissors":
+            robotChoiceRock.style.display = "none";
+            robotChoicePaper.style.display = "none";
             robotChoiceScissors.style.display = "block";
+            robotChoiceLizard.style.display = "none";
+            robotChoiceSpock.style.display = "none";
             break;
         case "lizard":
             robotChoiceLizard.style.display = "block";
+            robotChoiceRock.style.display = "none";
+            robotChoicePaper.style.display = "none";
+            robotChoiceScissors.style.display = "none";
+            robotChoiceSpock.style.display = "none";
             break;
         case "spock":
+            robotChoiceRock.style.display = "none";
+            robotChoicePaper.style.display = "none";
+            robotChoiceScissors.style.display = "none";
+            robotChoiceLizard.style.display = "none";
             robotChoiceSpock.style.display = "block";
             break;
+        default: 
     } 
     console.log(computerChoiceValue)
 }
 
-    let oldScore;
+    
     function incrementScore() {
+    let oldScore;
+    let userWins = userSelection();
+    console.log(userWins)
     if (userWins === true) {
     oldScore = parseInt(document.getElementById("scores-player").innerText);
     document.getElementById("scores-player").innerText = ++oldScore;
@@ -222,6 +251,9 @@ function computerSelectionImg(){
 // Reference - needed
 function verseOutcome() {
     let outcome;
+    let computerChoiceValue = computerChoice();
+    let userChoice = rockSelected() || paperSelected() || scissorsSelected() || lizardSelected() || spockSelected();
+    console.log(userChoice);
     const winningCombinations = [
         ["scissors", "paper"],
         ["paper", "rock"],
