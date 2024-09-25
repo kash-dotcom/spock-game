@@ -24,29 +24,68 @@
 
 </head>
 <body>
-    <div id="instructions-btn">
-        <button alt="gameplay instructions" onclick="toggle()"><i class="fa-solid fa-circle-question"></i></button>   
+    <button id="myBtn"><i class="fa-solid fa-circle-question"></i></button>
+  
+    <div id="myModal" class="modal">
+     <!-- The instructions modal-->
+            <div class="modal-content">
+            <span class="close">&times;</span>
+                    <h2>Instructions</h2>
+                    <p> Tried rock paper scissors? Now let your imagination<br>
+                        run wild with Rock Paper Scissors Lizard Spock <br>
+                        In the words of the genius that is Dr Sheldon Cooper. <br>
+                        <br>
+                        “It’s very simple...
+                        <br>
+                        Scissors <strong>cuts</strong>  Paper
+                        <br>
+                        Paper <strong>covers</strong>  Rock
+                        <br>
+                        Rock <strong>crushes</strong> Lizard
+                        <br>
+                        Lizard <strong>poisons</strong> Spock
+                        <br>
+                        Spock <strong>smashes</strong> Scissors
+                        <br>
+                        Scissors <strong>decapitates</strong> Lizard
+                        <br>
+                        Lizard <strong>eats</strong> Paper
+                        <br>
+                        Paper <strong>disproves</strong> Spock
+                        <br>
+                        Spock <strong>vaporises</strong> Rock
+                        <br>
+                        and as it always has Rock <strong>crushes</strong> scissors”</p>
+            </div>
+        <img src="assets/images/rock-paper-scissors-lizard-spock-original.webp" alt="visual representation of the rock paper scissor lizard spock">
     </div>
+
+    <!-- <div id="instructions-btn">
+        <i class="fa-solid fa-circle-question"></i> 
+    </div>
+     The instructions modal
+     <div id="instruction-modal" class="modal-background">
+        <div id="instruction"> -->
 
     <div id="heading">
         <h1>Spock Game</h1>
-        <h2>Rock</h2>
-        <h2>Paper</h2>
-        <h2>Scissors</h2>
-        <h2>Lizard</h2>
-        <h2>Spock</h2>
+        <h2>Rock | Paper | scissors | lizard | spock</h2>
+        <!--<h2>Paper </h2>
+        <h2>Scissors </h2>
+        <h2>Lizard </h2>
+        <h2>Spock </h2> -->
     </div>
 <div id="games-area">
     <div id="choice-img">
         <div id="user-choice">
             <div id="user-choice-img">
-                <i id="user-img-rock" alt="select rock" class="fa-solid btn fa-hand-back-fist selected"></i>
-                <i id="user-img-paper" alt="select paper" class="fa-solid btn fa-hand selected"></i>
-                <i id="user-img-scissors"alt="select scissors" class="fa-solid btn user fa-hand-scissors selected"></i>
-                <i id="user-img-lizard"alt="select lizard"   class="fa-solid btn fa-hand-lizard selected"></i>
-                <i id="user-img-spock" alt="select spock" class="fa-solid btn fa-hand-spock selected"></i>
+                <i id="user-img-rock" alt="select rock" class="fa-solid btn fa-hand-back-fist rock-selected"></i>
+                <i id="user-img-paper" alt="select paper" class="fa-solid btn fa-hand paper-selected"></i>
+                <i id="user-img-scissors"alt="select scissors" class="fa-solid btn user fa-hand-scissors scissors-selected"></i>
+                <i id="user-img-lizard"alt="select lizard"   class="fa-solid btn fa-hand-lizard lizard-selected"></i>
+                <i id="user-img-spock" alt="select spock" class="fa-solid btn fa-hand-spock spock-selected"></i>
             </div>
-            <h2 id="user-choice-title">Player</h2>
+            <h2 id="user-choice-title">Player <span id="scores-player">0</span></h2>
 
         </div>
         <div id="sofa">
@@ -54,27 +93,22 @@
         </div>
         <div id="robot-choice">
             <div id="robot-choice-img">
-                <i id="robot-img-rock" class="fa-solid btn fa-hand-back-fist selected"></i>
-                <i id="robot-img-paper" class="fa-solid btn fa-hand selected"></i>
-                <i id="robot-img-scissors" class="fa-solid btn user fa-hand-scissors selected"></i>
-                <i id="robot-img-lizard" class="fa-solid btn fa-hand-lizard selected"></i>
-                <i id="robot-img-spock" class="fa-solid btn fa-hand-spock selected"></i>    
+                <i id="robot-img-rock" class="fa-solid btn fa-hand-back-fist rock-selected"></i>
+                <i id="robot-img-paper" class="fa-solid btn fa-hand paper-selected"></i>
+                <i id="robot-img-scissors" class="fa-solid btn user fa-hand-scissors scissors-selected"></i>
+                <i id="robot-img-lizard" class="fa-solid btn fa-hand-lizard lizard-selected"></i>
+                <i id="robot-img-spock" class="fa-solid btn fa-hand-spock spock-selected"></i>    
             </div>
 
-            <h2 id="computer-choice-title">Computer</h2>
+            <h2 id="computer-choice-title">Computer <span id="scores-robot">0</span></h2>
         </div>
     </div>
-    
-    <div id="outcome-score">
-        <h1 id="outcome">Outcome</h1>
-        
-        <div id="score">
-            
-                <p>Player <span id="scores-player">0</span></p>
-                <p>Robot<span id="scores-robot">0</span></p>  
 
-        </div>
+   <!-- <div id="outcome-score">
+        <h1 id="outcome">Outcome</h1>
+    
     </div>
+    -->
 </div>
 
    <!-- onclick hide and show https://www.youtube.com/watch?v=-oQnDrNzTTA -->
@@ -107,51 +141,7 @@
 
     </div>
 
-    <!-- The instructions modal-->
-    <div id="instruction-modal" class="modal-background">
-        <div id="instruction"> 
-                <h2>Instructions</h2>
-                <p> Tried rock paper scissors? Now let your imagination<br>
-                    run wild with Rock Paper Scissors Lizard Spock <br>
-                    In the words of the genius that is Dr Sheldon Cooper. <br>
-                    <br>
-                    “It’s very simple...
-                    <br>
-                    Scissors <strong>cuts</strong>  Paper
-                    <br>
-                    Paper <strong>covers</strong>  Rock
-                    <br>
-                    Rock <strong>crushes</strong> Lizard
-                    <br>
-                    Lizard <strong>poisons</strong> Spock
-                    <br>
-                    Spock <strong>smashes</strong> Scissors
-                    <br>
-                    Scissors <strong>decapitates</strong> Lizard
-                    <br>
-                    Lizard <strong>eats</strong> Paper
-                    <br>
-                    Paper <strong>disproves</strong> Spock
-                    <br>
-                    Spock <strong>vaporises</strong> Rock
-                    <br>
-                    and as it always has Rock <strong>crushes</strong> scissors”</p>
-        </div>
-    </div>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-    </div>
+   </div>
 
 
     <script src="assets/js/scripts.js"></script>

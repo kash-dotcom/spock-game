@@ -15,7 +15,7 @@ font {
 body {
     font-family: "Handjet", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 700px;
+    font-weight: 700
 }
 
 
@@ -54,7 +54,44 @@ body {
 /*The background for the model 
 /* https://www.w3schools.com/howto/howto_css_modals.asp*/
 
-
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #262262;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
  .modal-background {
     display: none;
     position: fixed;
@@ -82,6 +119,7 @@ element.style {
   border: 1px solid #888;
   width: 100%; /* Could be more or less, depending on screen size */
   color: aliceblue;
+  visibility: none;
 }
 
 #instruction-modal p {
@@ -137,6 +175,26 @@ element.style {
     border: none;
 }
 
+/* selected hand gestures */
+.rock-selected {
+   color: #4e4577;
+}
+
+.paper-selected {
+    color: #ffbd59;
+}
+
+.scissors-selected {
+    color: #a21c16 ;
+}
+
+.lizard-selected {
+    color: #04814a;
+}
+
+.spock-selected {
+    color: #0a66bb;
+}
 
 /* visability hidden onload https://www.reddit.com/r/learnjavascript/comments/aw5l96/how_do_i_change_the_display_or_visibility/ */
 .user-selection {
@@ -161,7 +219,7 @@ element.style {
 .fa-couch:before {
     content: "\f4b8";
     font-size: 229px;
-    color: #a54114;
+    color: #262262
 }
 
 #choice-img {
@@ -185,6 +243,7 @@ element.style {
     flex-direction: column;
     align-items: baseline;
     padding-left: 32px;
+    align-self: center;
 }
 
 
@@ -193,11 +252,30 @@ display: flex;
 flex-direction: column;
 align-items: baseline;
 padding-right: 29px;
+align-self: center;
 
+}
+
+#scores-player {
+    color: #04814a;
+    font-weight: 600;
+}
+
+#scores-robot {
+    color:#0a66bb;
+    font-weight: 600;
 }
 
 #user-choice-title {
     padding-right: 29px;
+}
+
+#outcome-score {
+    align-self: center;
+}
+
+#score > p {
+    font-size: 33px;
 }
 
 .selected {

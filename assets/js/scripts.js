@@ -1,15 +1,27 @@
 // Get the modal
+var modal = document.getElementById("myModal");
 
-function toggle (){
-    var modal = document.getElementById("fa-circle-question");
-    modal.classList.toggle('active')
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
 
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
 }
-// Instruction question mark
-var btn = document.getElementsByClassName("fa-circle-question")
 
-btn.onclick = function () {
-    modal.style.display = "block";
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }
 /*
 // styling of ID on hover
@@ -123,36 +135,30 @@ function whosTheWinner(userChoice) {
    // console.log("Winner?? user " + userChoice);
 
     if (userChoice === computerChoiceValue) {
-        //verseOutcome(); 
         console.log("It's a draw");  
 
     } else if ((userChoice === "rock" && computerChoiceValue === "scissors") || (userChoice === "rock" && computerChoiceValue === "lizard")) {
         userWins = true;
-        //verseOutcome(); 
         console.log("user wins");
         //console.log("It's gonna be...: "+ computerChoiceValue);
 
     } else if ((userChoice === "paper" && computerChoiceValue === "rock")|| (userChoice === "paper" && computerChoiceValue === "spock")) {
         userWins = true;
-       //verseOutcome(); 
         console.log("user wins");
         //console.log("It's gonna be...: "+ computerChoiceValue);
 
     } else if ((userChoice === "scissors" && computerChoiceValue === "lizard") || (userChoice === "scissors" && computerChoiceValue === "paper")) {
         userWins = true;
-        //verseOutcome();
         console.log("user Wins");
         //console.log("It's gonna be...: "+ computerChoiceValue);
 
     } else if ((userChoice === "lizard" && computerChoiceValue === "spock") || (userChoice === "lizard" && computerChoiceValue === "paper")) {
         userWins = true;
-       //verseOutcome(); 
         console.log("user Wins");
        // console.log("It's gonna be...: "+ computerChoiceValue);
 
     } else if ((userChoice === "spock" && computerChoiceValue === "scissors") || (userChoice === "spock" && computerChoiceValue === "rock")) {
         userWins = true;
-        //verseOutcome();
         console.log("user Wins");
         //console.log("It's gonna be...: "+ computerChoiceValue);
         
@@ -160,13 +166,15 @@ function whosTheWinner(userChoice) {
     console.log("computer wins");
     }
    // computerSelectionImg(computerChoiceValue);
-    updateScores(userWins)
+    verseOutcome(computerChoiceValue);
+    verseOutcome(userChoice);
+    updateScores(userWins);
     return {
         // reference - problem solving exercise with Gemmini AI that taught me how to return more than one value
         userWins: userWins,
         //computerChoiceValue: computerChoiceValue,
     };
-
+    
 }
 
 //Adapted from Code Insitutes - Love Maths assessment
@@ -186,9 +194,6 @@ function updateScores(userWins) {
         console.log("Computer: " + computerScore);
 }
 }
-
-
-
 
 
 /*
@@ -248,19 +253,18 @@ function computerSelectionImg(computerChoiceValue){
 
     
 
-
-
+/*
 // Reference - needed
 function verseOutcome(computerChoiceValue, userChoice) {
     let outcome;
 
     console.log("message: " + userChoice);
     const winningCombinations = [
-        ["scissors", "paper"],
-        ["paper", "rock"],
-        ["rock", "lizard"],
-        ["lizard", "spock"],
-        ["spock", "scissors"],
+        ["scissors", "paper"], "Scissors cut Paper",
+        ["paper", "rock"], "Paper covers Rock",
+        ["rock", "lizard"], "Rock crushes Lizard",
+        ["lizard", "spock"], "Lizard poisons Spock",
+        ["spock", "scissors"], "Spock smashes Scissors",
         ["scissors", "lizard"],
         ["lizard", "paper"],
         ["paper", "spock"],
@@ -303,47 +307,63 @@ document.getElementById("outcome").innerText = `${outcome}`;
 console.log(outcome);
     return outcome;
 }
+*/
 
-/*
 function verseOutcome(computerChoiceValue, userChoice) {
     let outcome;
+    console.log(computerChoiceValue);
+    console.log(userChoice);
 
-    console.log("message: " + userChoice);
 // Outcome verse
 if ((userChoice || computerChoiceValue === "rock") && (userChoice || computerChoiceValue === "scissors")) {
+    outcome = "Rock crushes scissors";
     console.log("Rock crushes scissors")
 
 } else if ((userChoice || computerChoiceValue === "scissors") && (userChoice || computerChoiceValue === "paper")) {
+    outcome = "Scissors cut Paper";
     console.log("Scissors cut Paper")
 
 } else if ((userChoice || computerChoiceValue === "paper") && (userChoice || computerChoiceValue === "rock")) {
+    outcome = "Paper covers Rock";
     console.log("Paper covers Rock")
 
 } else if ((userChoice || computerChoiceValue === "rock") && (userChoice || computerChoiceValue === "lizard")) {
+    outcome = "Rock crushes Lizard";
     console.log("Rock crushes Lizard")
 
 } else if ((userChoice || computerChoiceValue === "lizard")&& (userChoice || computerChoiceValue === "spock")) {
+    outcome = "Lizard poisons Spock";
     console.log("Lizard poisons Spock")
 
 } else if ((userChoice || computerChoiceValue === "spock") && (userChoice || computerChoiceValue === "scissors")) {
-    console.log("Spock smashes Scissors")
+     outcome = "Spock smashes Scissors";
+     console.log("Spock smashes Scissors")
     
 } else if ((userChoice || computerChoiceValue === "scissors") && (userChoice || computerChoiceValue === "lizard")) {
+    outcome = "Scissors decapitates Lizard"
     console.log("Scissors decapitates Lizard")
     
 } else if ((userChoice || computerChoiceValue === "lizard") && (userChoice || computerChoiceValue === "paper")) {
+    outcome = "Lizard eats Paper"
     console.log("Lizard eats Paper")
     
 } else if ((userChoice || computerChoiceValue === "paper") && (userChoice || computerChoiceValue === "spock")) {
+    outcome = "Paper disproves Spock"
     console.log("Paper disproves Spock")
     
 } else if ((userChoice || computerChoiceValue === "spock") && (userChoice || computerChoiceValue === "rock")) {
+    outcome = "Spock vaporises Rock"
     console.log("Spock vaporises Rock")
     
 } else if ((userChoice || computerChoiceValue === "rock") && (userChoice || computerChoiceValue === "scissors")) {
+    outcome = "Scissors cut Paper"
     console.log("Scissors cut Paper")
     
+} else {
+    console.log("Have a rethink")
 }
+console.log("message: " + outcome);
+return outcome;
 }
 
     /*
