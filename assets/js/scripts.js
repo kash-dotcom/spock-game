@@ -166,8 +166,7 @@ function whosTheWinner(userChoice) {
     console.log("computer wins");
     }
    // computerSelectionImg(computerChoiceValue);
-    verseOutcome(computerChoiceValue);
-    verseOutcome(userChoice);
+    verseOutcome(computerChoiceValue, userChoice)
     updateScores(userWins);
     return {
         // reference - problem solving exercise with Gemmini AI that taught me how to return more than one value
@@ -194,7 +193,7 @@ function updateScores(userWins) {
         console.log("Computer: " + computerScore);
 }
     gameSetMatch(userScore, computerScore );
-    
+
 return {
     userScore: userScore,
     computerScore: computerScore

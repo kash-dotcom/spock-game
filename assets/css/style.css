@@ -175,25 +175,36 @@ element.style {
     border: none;
 }
 
+
 /* selected hand gestures */
 .rock-selected {
    color: #4e4577;
+   height: 65px;
+   width: 100px;
 }
 
 .paper-selected {
     color: #ffbd59;
+    height: 65px;
+    width: 100px;
 }
 
 .scissors-selected {
-    color: #a21c16 ;
+    color: #a21c16;
+    height: 65px;
+    width: 100px;
 }
 
 .lizard-selected {
     color: #04814a;
+    height: 65px;
+    width: 100px;
 }
 
 .spock-selected {
     color: #0a66bb;
+    height: 65px;
+    width: 100px;
 }
 
 /* visability hidden onload https://www.reddit.com/r/learnjavascript/comments/aw5l96/how_do_i_change_the_display_or_visibility/ */
@@ -225,6 +236,7 @@ element.style {
 #choice-img {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #user-choice-img, #robot-choice-img {
@@ -244,16 +256,16 @@ element.style {
     align-items: baseline;
     padding-left: 32px;
     align-self: center;
+    padding-right: 40px;
 }
 
-
-#user-choice{
-display: flex;
-flex-direction: column;
-align-items: baseline;
-padding-right: 29px;
-align-self: center;
-
+#user-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-right: 29px;
+    align-self: center;
+    order: 2;
 }
 
 #scores-player {
@@ -268,6 +280,12 @@ align-self: center;
 
 #user-choice-title {
     padding-right: 29px;
+    margin-top: 0px;
+}
+
+#computer-choice-title {
+    right: 29px;
+    margin-top: 0px;
 }
 
 #outcome-score {
@@ -282,6 +300,21 @@ align-self: center;
     color: black;
 }
 
+
+@media only screen and (min-width: 564px) {
+    #choice-img{
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        padding-right: 29px;
+        align-self: center;
+        }
+    
+    #user-choice {
+        order: 0;
+    }
+}
+    
 /* games area outcomes
 .selected-rock {
     background-color: #4e4577;
