@@ -193,9 +193,26 @@ function updateScores(userWins) {
         document.getElementById("scores-robot").innerText = ++computerScore;
         console.log("Computer: " + computerScore);
 }
+    gameSetMatch(userScore, computerScore );
+    
+return {
+    userScore: userScore,
+    computerScore: computerScore
+}
 }
 
 
+function gameSetMatch(userScore, computerScore) {
+let gameOver = document.getElementById("game-over");
+if (userScore >= 5) {
+    gameOver.innerHTML = "You win";
+    console.log("Game Set Match: Player Wins!");
+} else if (computerScore >= 5) {
+    gameOver.innerHTML = "Game Over...Computer Wins";
+    console.log ("Game Set Match: Computer Win!");
+
+}
+}
 /*
 /** 
 *computer selection - show image
