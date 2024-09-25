@@ -43,71 +43,64 @@ let userChoiceSpock = document.getElementById("user-img-spock");
 
 //creating userChoice
 function rockSelected() {
-    let userChoice;
-    userChoice = "rock";
-    console.log("user selected " + userChoice);
-    whosTheWinner(); 
+    let userChoice = "rock";
+    console.log("user: " + userChoice);
+    whosTheWinner(userChoice);
         userChoiceRock.style.display = "block";
         userChoicePaper.style.display = "none";
         userChoiceScissors.style.display = "none";
         userChoiceLizard.style.display = "none";
         userChoiceSpock.style.display = "none";
-    return userChoice
-  
+        return userChoice;
 }
-    function paperSelected() {
-        let userChoice;
-        userChoice = "paper";
-        console.log("user selected " + userChoice);
-        whosTheWinner();
-            userChoicePaper.style.display = "block";
-            userChoiceRock.style.display = "none";
-            userChoiceScissors.style.display = "none";
-            userChoiceLizard.style.display = "none";
-            userChoiceSpock.style.display = "none";
-        return userChoice
+function paperSelected() {
+    let userChoice = "paper";
+    console.log("user: " + userChoice);
+    whosTheWinner(userChoice);
+        userChoicePaper.style.display = "block";
+        userChoiceRock.style.display = "none";
+        userChoiceScissors.style.display = "none";
+        userChoiceLizard.style.display = "none";
+        userChoiceSpock.style.display = "none";
+        return userChoice;
+
+}
+function scissorsSelected() {
+    let userChoice = "scissors";
+    console.log("user: " + userChoice);
+    whosTheWinner(userChoice);
+        userChoiceScissors.style.display = "block";
+        userChoiceRock.style.display = "none";
+        userChoicePaper.style.display = "none";
+        userChoiceLizard.style.display = "none";
+        userChoiceSpock.style.display = "none";
+        return userChoice;
     
-    }
-    function scissorsSelected() {
-        let userChoice;
-        userChoice = "scissors";
-        console.log("user selected " + userChoice);
-        whosTheWinner();
-            userChoiceScissors.style.display = "block";
-            userChoiceRock.style.display = "none";
-            userChoicePaper.style.display = "none";
-            userChoiceLizard.style.display = "none";
-            userChoiceSpock.style.display = "none";
-        return userChoice
-        
-    }
-    function lizardSelected() {
-        let userChoice;
-        userChoice = "lizard";
-        console.log("user selected " + userChoice);
-        whosTheWinner();
-            userChoiceLizard.style.display = "block";
-            userChoiceRock.style.display = "none";
-            userChoicePaper.style.display = "none";
-            userChoiceScissors.style.display = "none";
-            userChoiceSpock.style.display = "none";
-        return userChoice
-        
-        
-    }
-    function spockSelected() {
-        let userChoice;
-        userChoice = "spock";
-        console.log("user selected " + userChoice);
-        whosTheWinner();
-            userChoiceSpock.style.display = "block";
-            userChoiceRock.style.display = "none";
-            userChoicePaper.style.display = "none";
-            userChoiceScissors.style.display = "none"
-            userChoiceLizard.style.display = "none";
-        return userChoice
+}
+function lizardSelected() {
+    let userChoice = "lizard";
+    console.log("user: " + userChoice);
+    whosTheWinner(userChoice);
+        userChoiceLizard.style.display = "block";
+        userChoiceRock.style.display = "none";
+        userChoicePaper.style.display = "none";
+        userChoiceScissors.style.display = "none";
+        userChoiceSpock.style.display = "none";
+        return userChoice;
     
-    }
+    
+}
+function spockSelected() {
+    let userChoice = "spock";
+    console.log("user: " + userChoice);
+    whosTheWinner(userChoice);
+        userChoiceSpock.style.display = "block";
+        userChoiceRock.style.display = "none";
+        userChoicePaper.style.display = "none";
+        userChoiceScissors.style.display = "none";
+        userChoiceLizard.style.display = "none";
+        return userChoice;    
+}
 
 //creating computerChoice - adpated from - https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/ - 
 
@@ -121,72 +114,88 @@ function computerChoice() {
 /**
 * Who's the winner!! Computer Vs Human
  */
-function whosTheWinner() {
-    let computerChoiceValue = computerChoice();
+function whosTheWinner(userChoice) {
+    const computerChoiceValue = computerChoice();
     let userWins = false;
-    let userChoice;
-    
-    console.log("computer selected: "+ computerChoiceValue);
+    computerSelectionImg(computerChoiceValue);
+  
+   console.log("computer: "+ computerChoiceValue);
+   // console.log("Winner?? user " + userChoice);
 
     if (userChoice === computerChoiceValue) {
-        console.log("It's a draw");
-     
+        //verseOutcome(); 
+        console.log("It's a draw");  
 
     } else if ((userChoice === "rock" && computerChoiceValue === "scissors") || (userChoice === "rock" && computerChoiceValue === "lizard")) {
         userWins = true;
-        incrementScore();
+        //verseOutcome(); 
         console.log("user wins");
+        //console.log("It's gonna be...: "+ computerChoiceValue);
 
     } else if ((userChoice === "paper" && computerChoiceValue === "rock")|| (userChoice === "paper" && computerChoiceValue === "spock")) {
         userWins = true;
-        verseOutcome(); 
-        incrementScore();
+       //verseOutcome(); 
         console.log("user wins");
+        //console.log("It's gonna be...: "+ computerChoiceValue);
 
     } else if ((userChoice === "scissors" && computerChoiceValue === "lizard") || (userChoice === "scissors" && computerChoiceValue === "paper")) {
         userWins = true;
-        verseOutcome();
-        incrementScore();
-        console.log("user wins");
+        //verseOutcome();
+        console.log("user Wins");
+        //console.log("It's gonna be...: "+ computerChoiceValue);
 
     } else if ((userChoice === "lizard" && computerChoiceValue === "spock") || (userChoice === "lizard" && computerChoiceValue === "paper")) {
         userWins = true;
-        verseOutcome(); 
-        incrementScore();
-        console.log("user wins");
+       //verseOutcome(); 
+        console.log("user Wins");
+       // console.log("It's gonna be...: "+ computerChoiceValue);
 
     } else if ((userChoice === "spock" && computerChoiceValue === "scissors") || (userChoice === "spock" && computerChoiceValue === "rock")) {
         userWins = true;
-        verseOutcome();
-        incrementScore();
-        console.log("user wins");
+        //verseOutcome();
+        console.log("user Wins");
+        //console.log("It's gonna be...: "+ computerChoiceValue);
         
     } else {
-        computerWins = true;
     console.log("computer wins");
     }
-    computerSelectionImg(computerChoiceValue);
-
+   // computerSelectionImg(computerChoiceValue);
+    updateScores(userWins)
     return {
         // reference - problem solving exercise with Gemmini AI that taught me how to return more than one value
-        computerWins: computerWins,
         userWins: userWins,
-        computerChoiceValue: computerChoiceValue,
+        //computerChoiceValue: computerChoiceValue,
     };
+
 }
 
+function updateScores(userWins) {
+    
+    let userScore = 0;
+    let computerScore = 0;
+    console.log(userWins);
+    if (userWins === true) {
+        ++userScore;
+        console.log("User: " +userScore);
+
+    } else { 
+        ++computerScore;
+        console.log("Computer: " + computerScore);
+}
+}
+/*
 /** 
 *computer selection - show image
 */
-function computerSelectionImg(){
+function computerSelectionImg(computerChoiceValue){
 // Image shown when computer selects 
     let robotChoiceRock = document.getElementById("robot-img-rock");
     let robotChoicePaper = document.getElementById("robot-img-paper");
     let robotChoiceScissors = document.getElementById("robot-img-scissors");
     let robotChoiceLizard = document.getElementById("robot-img-lizard");
     let robotChoiceSpock = document.getElementById("robot-img-spock");
-    let computerChoiceValue = computerChoice();
-    console.log(computerChoiceValue)
+
+    //console.log("Img: Computer " + computerChoiceValue);
    
     switch(computerChoiceValue) {
         case "rock":
@@ -211,10 +220,10 @@ function computerSelectionImg(){
             robotChoiceSpock.style.display = "none";
             break;
         case "lizard":
-            robotChoiceLizard.style.display = "block";
             robotChoiceRock.style.display = "none";
             robotChoicePaper.style.display = "none";
             robotChoiceScissors.style.display = "none";
+            robotChoiceLizard.style.display = "block";
             robotChoiceSpock.style.display = "none";
             break;
         case "spock":
@@ -226,34 +235,18 @@ function computerSelectionImg(){
             break;
         default: 
     } 
-    console.log(computerChoiceValue)
+ 
 }
 
     
-    function incrementScore() {
-    let oldScore;
-    let userWins = userSelection();
-    console.log(userWins)
-    if (userWins === true) {
-    oldScore = parseInt(document.getElementById("scores-player").innerText);
-    document.getElementById("scores-player").innerText = ++oldScore;
-    console.log("Computer +1");
-    console.log(oldScore);
 
-    } else { oldScore = parseInt(document.getElementById("scores-robot").innerText);
-    document.getElementById("scores-robot").innerText = ++oldScore;
-    console.log("Computer +1");
-    console.log(oldScore);
-    }
-}
 
 
 // Reference - needed
-function verseOutcome() {
+function verseOutcome(computerChoiceValue, userChoice) {
     let outcome;
-    let computerChoiceValue = computerChoice();
-    let userChoice = rockSelected() || paperSelected() || scissorsSelected() || lizardSelected() || spockSelected();
-    console.log(userChoice);
+
+    console.log("message: " + userChoice);
     const winningCombinations = [
         ["scissors", "paper"],
         ["paper", "rock"],
@@ -297,22 +290,58 @@ function verseOutcome() {
         outcome = "unknown";
         }
     }
+//updates the outcome div with the output of the outcome
+document.getElementById("outcome").innerText = `${outcome}`;
 console.log(outcome);
     return outcome;
 }
 
-//updates the outcome div with the output of the outcome
+/*
+function verseOutcome(computerChoiceValue, userChoice) {
+    let outcome;
 
-function message () {
+    console.log("message: " + userChoice);
+// Outcome verse
+if ((userChoice || computerChoiceValue === "rock") && (userChoice || computerChoiceValue === "scissors")) {
+    console.log("Rock crushes scissors")
+
+} else if ((userChoice || computerChoiceValue === "scissors") && (userChoice || computerChoiceValue === "paper")) {
+    console.log("Scissors cut Paper")
+
+} else if ((userChoice || computerChoiceValue === "paper") && (userChoice || computerChoiceValue === "rock")) {
+    console.log("Paper covers Rock")
+
+} else if ((userChoice || computerChoiceValue === "rock") && (userChoice || computerChoiceValue === "lizard")) {
+    console.log("Rock crushes Lizard")
+
+} else if ((userChoice || computerChoiceValue === "lizard")&& (userChoice || computerChoiceValue === "spock")) {
+    console.log("Lizard poisons Spock")
+
+} else if ((userChoice || computerChoiceValue === "spock") && (userChoice || computerChoiceValue === "scissors")) {
+    console.log("Spock smashes Scissors")
     
-getElementById("outcome").innerText = `${outcome}`;
-
-
-return userWins;
+} else if ((userChoice || computerChoiceValue === "scissors") && (userChoice || computerChoiceValue === "lizard")) {
+    console.log("Scissors decapitates Lizard")
+    
+} else if ((userChoice || computerChoiceValue === "lizard") && (userChoice || computerChoiceValue === "paper")) {
+    console.log("Lizard eats Paper")
+    
+} else if ((userChoice || computerChoiceValue === "paper") && (userChoice || computerChoiceValue === "spock")) {
+    console.log("Paper disproves Spock")
+    
+} else if ((userChoice || computerChoiceValue === "spock") && (userChoice || computerChoiceValue === "rock")) {
+    console.log("Spock vaporises Rock")
+    
+} else if ((userChoice || computerChoiceValue === "rock") && (userChoice || computerChoiceValue === "scissors")) {
+    console.log("Scissors cut Paper")
+    
+}
 }
 
-
-
+    /*
+    if ((userChoice === scissors && computerChoiceValue === "paper") || (userChoice === paper && computerChoiceValue === "paper")) {
+        outcome = "Scissors cut Paper";
+    */
 
 //code institute - Love Maths project
 /**
