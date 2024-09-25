@@ -169,17 +169,20 @@ function whosTheWinner(userChoice) {
 
 }
 
+//Adapted from Code Insitutes - Love Maths assessment
 function updateScores(userWins) {
     
     let userScore = 0;
     let computerScore = 0;
     console.log(userWins);
     if (userWins === true) {
-        ++userScore;
+        userScore = parseInt(document.getElementById("scores-player").innerText);
+        document.getElementById("scores-player").innerText = ++userScore
         console.log("User: " +userScore);
 
     } else { 
-        ++computerScore;
+        computerScore = parseInt(document.getElementById("scores-robot").innerText);
+        document.getElementById("scores-robot").innerText = ++computerScore;
         console.log("Computer: " + computerScore);
 }
 }
