@@ -186,6 +186,11 @@ function updateScores(userWins) {
         console.log("Computer: " + computerScore);
 }
 }
+
+
+
+
+
 /*
 /** 
 *computer selection - show image

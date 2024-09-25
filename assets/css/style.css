@@ -166,7 +166,7 @@ element.style {
 
 #choice-img {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #user-choice-img, #robot-choice-img {
@@ -174,10 +174,17 @@ element.style {
     justify-content: center;
 
 }
+
+/*games area*/
+#games-area {
+    display: flex;
+    flex-direction: column;
+}
 #robot-choice {
     display: flex;
     flex-direction: column;
     align-items: baseline;
+    padding-left: 32px;
 }
 
 
