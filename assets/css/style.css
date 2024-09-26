@@ -140,16 +140,26 @@ strong {
     font-family: Orbitron;
     font-size: 1.3em;
 }
+#heading > h1 {
+    font-family: Orbitron;
+    font-size: 3rem;
+}
+
+
+#heading > h2 {
+    font-size: 2rem;
+}
 
 .how-to-play {
     display: flex;
     justify-content: center;
+    font-size: 1.4em;
 }
 
 .click-to-play {
     align-self: center;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 #outcome > h1{
@@ -176,7 +186,7 @@ strong {
   border: 1px solid #888;
   width: 100%; /* Could be more or less, depending on screen size */
   color: aliceblue;
-  visibility: none;
+  visibility: hidden;
 }
 
 #instruction-modal p {
