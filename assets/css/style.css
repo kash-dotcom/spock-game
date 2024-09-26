@@ -11,6 +11,21 @@ font {
     "ELSH" 2;
 }
 
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
 /* ----------------------------------------------------------------------Global Style ------------------------------------------------*/
 body {
     font-family: "Handjet", sans-serif;
@@ -109,11 +124,27 @@ body {
     filter: blur(20px);
 }
 
+.modal-title {
+    color: whitesmoke;
+    font-size: 3.2em;
+    font-family: 'Orbitron'
+}
 
+.verse {
+    font-family: Roboto Mono;
+    color: whitesmoke;
+    font-size: 1.2em;
+}
+
+strong {
+    font-family: Orbitron;
+    font-size: 1.3em;
+}
+/*
 element.style {
     margin-left: 1%;
 }
-
+*/
 #instruction-modal {
   padding: 44px 0 0 13px;
   border: 1px solid #888;
