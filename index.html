@@ -42,7 +42,7 @@
 
 <body>
 
-    <button id="instructions"><i class="fa-solid instructions-btn fa-circle-question"></i></button>
+    <button id="instructions" aria-label="Open the instructions"><i class="fa-solid instructions-btn fa-circle-question"></i></button>
 
     <div id="myModal" class="modal">
         <!-- The instructions modal-->
@@ -78,34 +78,23 @@
                 Rock <strong>crushes</strong> scissors”
             </p>
         </div>
-        <!-- <img src="assets/images/rock-paper-scissors-lizard-spock-original.webp" alt="visual representation of the rock paper scissor lizard spock"> -->
     </div>
 
-    <!-- <div id="instructions-btn">
-        <i class="fa-solid fa-circle-question"></i> 
-    </div>
-     The instructions modal
-     <div id="instruction-modal" class="modal-background">
-        <div id="instruction"> -->
 
     <div id="heading">
         <h1>Spock Game</h1>
         <h2>Rock | Paper | Scissors | Lizard | Spock</h2>
-        <!--<h2>Paper </h2>
-        <h2>Scissors </h2>
-        <h2>Lizard </h2>
-        <h2>Spock </h2> -->
     </div>
 
     <div id="games-area">
         <div id="choice-img">
             <div id="user-choice">
                 <div id="user-choice-img">
-                    <i id="user-img-rock" class="fa-solid btn fa-hand-back-fist rock-selected"></i>
-                    <i id="user-img-paper"  class="fa-solid btn fa-hand paper-selected"></i>
-                    <i id="user-img-scissors" class="fa-solid btn user fa-hand-scissors scissors-selected"></i>
-                    <i id="user-img-lizard" class="fa-solid btn fa-hand-lizard lizard-selected"></i>
-                    <i id="user-img-spock" alt="select spock" class="fa-solid btn fa-hand-spock spock-selected"></i>
+                    <i id="user-img-rock" title="Choose rock" class="fa-solid btn fa-hand-back-fist rock-selected"></i>
+                    <i id="user-img-paper" title="Choose paper" class="fa-solid btn fa-hand paper-selected"></i>
+                    <i id="user-img-scissors"  title="Choose scissors" class="fa-solid btn user fa-hand-scissors scissors-selected"></i>
+                    <i id="user-img-lizard" title="Choose lizard" class="fa-solid btn fa-hand-lizard lizard-selected"></i>
+                    <i id="user-img-spock" title="Choose spock" class="fa-solid btn fa-hand-spock spock-selected"></i>
                 </div>
                 <h2 id="user-choice-title">Player <span id="scores-player">0</span></h2>
 
@@ -136,13 +125,13 @@
 
         <div id="how-to-play">
             <p class="click-to-play"> 
-                <!--First to 5 wins -->
+                First to 5 wins
                 <br>
                 <strong>click an icon to start</strong>
                 <br>
                 <i class="fa-solid fa-down-long"></i><i class="fa-solid fa-down-long"></i><i class="fa-solid fa-down-long"></i><i class="fa-solid fa-down-long"></i><i class="fa-solid fa-down-long"></i>
                 <br>
-                if you need more help! Check out the question mark <i class="fa-solid fa-circle-question"></i> in the top left.
+                If you need more help! Check out the question mark <i class="fa-solid fa-circle-question"></i> in the top left.
                 <br>
             </p>
         </div>
@@ -150,33 +139,35 @@
     <!-- onclick hide and show https://www.youtube.com/watch?v=-oQnDrNzTTA -->
     <div id="selection">
         <div class="rock-container selection-btn">
-            <button id="rock" class="btn" alt="select rock"><i class="fa-solid fa-hand-back-fist"></i></button>
+            <button id="rock" class="btn" title="Choose rock" ><i class="fa-solid fa-hand-back-fist"></i></button>
             <h3>Rock</h3>
         </div>
 
         <div class="paper-container selection-btn">
-            <button id="paper" class="btn" alt="select paper"><i class="fa-solid fa-hand"></i></button>
+            <button id="paper" class="btn" title="Choose paper" ><i class="fa-solid fa-hand"></i></button>
             <h3>Paper</h3>
         </div>
 
         <div class="scissors-container selection-btn">
-            <button id="scissors" class=" btn" alt="select scissors"><i
+            <button id="scissors" class=" btn" title="Choose scissors" ><i
                     class="fa-solid user fa-hand-scissors"></i></button>
             <h3>Scissors</h3>
         </div>
 
         <div class="lizard-container selection-btn">
-            <button id="lizard" class="btn" alt="select lizard"><i class="fa-solid fa-hand-lizard"></i></button>
+            <button id="lizard" class="btn" title="Choose lizard"><i class="fa-solid fa-hand-lizard"></i></button>
             <h3>Lizard</h3>
 
         </div>
 
         <div class="spock-container selection-btn">
-            <button id="spock" class="btn" alt="select spock"><i class="fa-solid fa-hand-spock"></i></button>
+            <button id="spock" class="btn" title="Choose spock" ><i class="fa-solid fa-hand-spock"></i></button>
             <h3>Spock</h3>
         </div>
 
     </div>
+
+
 
     <script src="assets/js/scripts.js"></script>
     <script src="https://kit.fontawesome.com/2a30da66ac.js" crossorigin="anonymous"></script>

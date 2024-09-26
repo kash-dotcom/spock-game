@@ -2,8 +2,7 @@
 // <weight>: Use a value from 100 to 900*/
 
 font {
-  font-family: "Handjet", sans-serif;
-  font-optical-sizing: auto;
+  font-family: 'Handjet', sans-serif;
   font-weight: 700;
   font-style: normal;
   font-variation-settings:
@@ -12,15 +11,13 @@ font {
 }
 
 .roboto-mono {
-  font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
+  font-family: 'Roboto Mono', monospace;
   font-weight: 400;
   font-style: normal;
 }
 
 .orbitron {
-  font-family: "Orbitron", sans-serif;
-  font-optical-sizing: auto;
+  font-family: 'Orbitron', sans-serif;
   font-weight: 900;
   font-style: normal;
 }
@@ -29,7 +26,6 @@ font {
 /* ----------------------------------------------------------------------Global Style ------------------------------------------------*/
 body {
     font-family: "Handjet", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 700
 }
 
@@ -143,11 +139,13 @@ strong {
 #heading > h1 {
     font-family: Orbitron;
     font-size: 3rem;
+    text-align: center;
 }
 
 
 #heading > h2 {
     font-size: 2rem;
+    text-align: center;
 }
 
 .how-to-play {
@@ -159,7 +157,8 @@ strong {
 .click-to-play {
     align-self: center;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    font-family: Roboto Mono;
 }
 
 #outcome > h1{
@@ -386,29 +385,4 @@ strong {
         order: 0;
     }
 }
-    
-/* games area outcomes
-.selected-rock {
-    background-color: #4e4577;
-    border: none;
-}
-
-.selected-paper {
-    background-color: #ffbd59;
-    border: none;
-}
-
-.selected-scissors {
-    background-color: #a21c16 ;
-    border: none;
-}
-
-.selected-lizard {
-    background-color: #04814a;
-    border: none;
-}
-
-.selected-spock {
-    background-color: #0a66bb;
-    border: none;
-}*/
+ 
