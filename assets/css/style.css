@@ -192,6 +192,13 @@ strong {
     font-family: barlow, sans-serif;
 } 
 
+
+#instructions {
+    background-color: white;
+    border-color: white;
+    border-style: none;
+}
+
 .instructions-btn {
     color: black;
     z-index: 10;
