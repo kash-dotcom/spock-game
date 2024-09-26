@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,24 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Google fonts --> 
+
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
     <!-- font for modal-->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
 
 
     <!-- https://favicon.io/favicon-converter/-->
@@ -35,42 +39,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
 
-    <button id="myBtn"><i class="fa-solid fa-circle-question"></i></button>
-  
+    <button id="instructions"><i class="fa-solid instructions-btn fa-circle-question"></i></button>
+
     <div id="myModal" class="modal">
-     <!-- The instructions modal-->
-            <div class="modal-content">
+        <!-- The instructions modal-->
+        <div class="modal-content">
             <span class="close">&times;</span>
-                    <h2 class="modal-title ">Instructions</h2>
-                    <p class="verse"> Tried rock paper scissors? Now let your imagination<br>
-                        run wild with Rock Paper Scissors Lizard Spock <br>
-                        In the words of the genius that is Dr Sheldon Cooper. <br>
-                        <br>
-                        “It’s very simple...
-                        <br>
-                        Scissors <strong>cuts</strong>  Paper
-                        <br>
-                        Paper <strong>covers</strong>  Rock
-                        <br>
-                        Rock <strong>crushes</strong> Lizard
-                        <br>
-                        Lizard <strong>poisons</strong> Spock
-                        <br>
-                        Spock <strong>smashes</strong> Scissors
-                        <br>
-                        Scissors <strong>decapitates</strong> Lizard
-                        <br>
-                        Lizard <strong>eats</strong> Paper
-                        <br>
-                        Paper <strong>disproves</strong> Spock
-                        <br>
-                        Spock <strong>vaporises</strong> Rock
-                        <br>
-                        and as it always has Rock <strong>crushes</strong> scissors”</p>
-            </div>
-       <!-- <img src="assets/images/rock-paper-scissors-lizard-spock-original.webp" alt="visual representation of the rock paper scissor lizard spock"> -->
+            <h2 class="modal-title ">Instructions</h2>
+            <p class="verse"> Tried rock paper scissors? Now let your imagination<br>
+                run wild with Rock Paper Scissors Lizard Spock <br>
+                In the words of the genius that is Dr Sheldon Cooper. <br>
+                <br>
+                “It’s very simple...
+                <br>
+                Scissors <strong>cuts</strong> Paper
+                <br>
+                Paper <strong>covers</strong> Rock
+                <br>
+                Rock <strong>crushes</strong> Lizard
+                <br>
+                Lizard <strong>poisons</strong> Spock
+                <br>
+                Spock <strong>smashes</strong> Scissors
+                <br>
+                Scissors <strong>decapitates</strong> Lizard
+                <br>
+                Lizard <strong>eats</strong> Paper
+                <br>
+                Paper <strong>disproves</strong> Spock
+                <br>
+                Spock <strong>vaporises</strong> Rock
+                <br>
+                and as it always has
+                <br>
+                Rock <strong>crushes</strong> scissors”
+            </p>
+        </div>
+        <!-- <img src="assets/images/rock-paper-scissors-lizard-spock-original.webp" alt="visual representation of the rock paper scissor lizard spock"> -->
     </div>
 
     <!-- <div id="instructions-btn">
@@ -82,52 +90,67 @@
 
     <div id="heading">
         <h1>Spock Game</h1>
-        <h2>Rock  |  Paper  |  Scissors  |  Lizard  |  Spock</h2>
+        <h2>Rock | Paper | Scissors | Lizard | Spock</h2>
         <!--<h2>Paper </h2>
         <h2>Scissors </h2>
         <h2>Lizard </h2>
         <h2>Spock </h2> -->
     </div>
-<div id="games-area">
-    <div id="choice-img">
-        <div id="user-choice">
-            <div id="user-choice-img">
-                <i id="user-img-rock" alt="select rock" class="fa-solid btn fa-hand-back-fist rock-selected"></i>
-                <i id="user-img-paper" alt="select paper" class="fa-solid btn fa-hand paper-selected"></i>
-                <i id="user-img-scissors"alt="select scissors" class="fa-solid btn user fa-hand-scissors scissors-selected"></i>
-                <i id="user-img-lizard"alt="select lizard"   class="fa-solid btn fa-hand-lizard lizard-selected"></i>
-                <i id="user-img-spock" alt="select spock" class="fa-solid btn fa-hand-spock spock-selected"></i>
+
+    <div id="games-area">
+        <div id="choice-img">
+            <div id="user-choice">
+                <div id="user-choice-img">
+                    <i id="user-img-rock" alt="select rock" class="fa-solid btn fa-hand-back-fist rock-selected"></i>
+                    <i id="user-img-paper" alt="select paper" class="fa-solid btn fa-hand paper-selected"></i>
+                    <i id="user-img-scissors" alt="select scissors"
+                        class="fa-solid btn user fa-hand-scissors scissors-selected"></i>
+                    <i id="user-img-lizard" alt="select lizard" class="fa-solid btn fa-hand-lizard lizard-selected"></i>
+                    <i id="user-img-spock" alt="select spock" class="fa-solid btn fa-hand-spock spock-selected"></i>
+                </div>
+                <h2 id="user-choice-title">Player <span id="scores-player">0</span></h2>
+
             </div>
-            <h2 id="user-choice-title">Player <span id="scores-player">0</span></h2>
+            <div id="sofa">
+                <i class="fa-solid fa-couch"></i>
+            </div>
+            <div id="robot-choice">
+                <div id="robot-choice-img">
+                    <i id="robot-img-rock" class="fa-solid btn fa-hand-back-fist rock-selected start-the-game"></i>
+                    <i id="robot-img-paper" class="fa-solid btn fa-hand paper-selected start-the-game"></i>
+                    <i id="robot-img-scissors" class="fa-solid btn user fa-hand-scissors scissors-selected start-the-game"></i>
+                    <i id="robot-img-lizard" class="fa-solid btn fa-hand-lizard lizard-selected start-the-game"></i>
+                    <i id="robot-img-spock" class="fa-solid btn fa-hand-spock spock-selected start-the-game"></i>
+                </div>
+
+                <h2 id="computer-choice-title">Computer <span id="scores-robot">0</span></h2>
+            </div>
+        </div>  
+
+        <div id="outcome-score">
+            <h1 id="outcome"></h1>
+            <h1 id="winner"></h1>
+            <h1 id="game-over"></h1>
+            <h1 id="restart">Restart <i class="fa-solid fa-rotate-right"></i></h1>
 
         </div>
-        <div id="sofa">
-            <i class="fa-solid fa-couch"></i>
-        </div>
-        <div id="robot-choice">
-            <div id="robot-choice-img">
-                <i id="robot-img-rock" class="fa-solid btn fa-hand-back-fist rock-selected"></i>
-                <i id="robot-img-paper" class="fa-solid btn fa-hand paper-selected"></i>
-                <i id="robot-img-scissors" class="fa-solid btn user fa-hand-scissors scissors-selected"></i>
-                <i id="robot-img-lizard" class="fa-solid btn fa-hand-lizard lizard-selected"></i>
-                <i id="robot-img-spock" class="fa-solid btn fa-hand-spock spock-selected"></i>    
-            </div>
 
-            <h2 id="computer-choice-title">Computer <span id="scores-robot">0</span></h2>
+        <div id="how-to-play">
+            <p class="click-to-play"> 
+                <!--First to 5 wins -->
+                <br>
+                <strong>click an icon to start</strong>
+                <br>
+                <i class="fa-solid fa-down-long"></i><i class="fa-solid fa-down-long"></i><i class="fa-solid fa-down-long"></i><i class="fa-solid fa-down-long"></i><i class="fa-solid fa-down-long"></i>
+                <br>
+                if you need more help! Check out the question mark <i class="fa-solid fa-circle-question"></i> in the top left.
+                <br>
+            </p>
         </div>
     </div>
-
-   <div id="outcome-score">
-        <h1 id="outcome"></h1>
-        <h1 id="game-over"></h1>
-    
-    </div>
-   
-</div>
-
-   <!-- onclick hide and show https://www.youtube.com/watch?v=-oQnDrNzTTA -->
-    <div id="selection" >
-        <div class="rock-container selection-btn" >
+    <!-- onclick hide and show https://www.youtube.com/watch?v=-oQnDrNzTTA -->
+    <div id="selection">
+        <div class="rock-container selection-btn">
             <button id="rock" class="btn" alt="select rock"><i class="fa-solid fa-hand-back-fist"></i></button>
             <h3>Rock</h3>
         </div>
@@ -138,27 +161,28 @@
         </div>
 
         <div class="scissors-container selection-btn">
-            <button id="scissors" class=" btn"alt="select scissors"><i class="fa-solid user fa-hand-scissors"></i></button>
+            <button id="scissors" class=" btn" alt="select scissors"><i
+                    class="fa-solid user fa-hand-scissors"></i></button>
             <h3>Scissors</h3>
         </div>
-        
-        <div class="lizard-container selection-btn"> 
-            <button id="lizard" class="btn"alt="select lizard"><i class="fa-solid fa-hand-lizard"></i></button>
+
+        <div class="lizard-container selection-btn">
+            <button id="lizard" class="btn" alt="select lizard"><i class="fa-solid fa-hand-lizard"></i></button>
             <h3>Lizard</h3>
 
         </div>
 
-        <div class="spock-container selection-btn">    
-            <button id="spock" class="btn"alt="select spock"><i class="fa-solid fa-hand-spock"></i></button>
+        <div class="spock-container selection-btn">
+            <button id="spock" class="btn" alt="select spock"><i class="fa-solid fa-hand-spock"></i></button>
             <h3>Spock</h3>
         </div>
 
     </div>
 
-   </div>
-
+    </div>
 
     <script src="assets/js/scripts.js"></script>
     <script src="https://kit.fontawesome.com/2a30da66ac.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
