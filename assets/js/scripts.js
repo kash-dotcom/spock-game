@@ -129,6 +129,7 @@ function computerChoice() {
 function whosTheWinner(userChoice) {
     const computerChoiceValue = computerChoice();
     let userWins = false;
+    let computerWins = false;
     computerSelectionImg(computerChoiceValue);
   
    console.log("computer: "+ computerChoiceValue);
@@ -163,11 +164,12 @@ function whosTheWinner(userChoice) {
         //console.log("It's gonna be...: "+ computerChoiceValue);
         
     } else {
+        computerWins = true;
     console.log("computer wins");
     }
    // computerSelectionImg(computerChoiceValue);
     verseOutcome(computerChoiceValue, userChoice)
-    updateScores(userWins);
+    updateScores(userWins, computerWins);
     return {
         // reference - problem solving exercise with Gemmini AI that taught me how to return more than one value
         userWins: userWins,
@@ -177,7 +179,7 @@ function whosTheWinner(userChoice) {
 }
 
 //Adapted from Code Insitutes - Love Maths assessment
-function updateScores(userWins) {
+function updateScores(userWins, computerWins) {
     
     let userScore = 0;
     let computerScore = 0;
@@ -186,13 +188,16 @@ function updateScores(userWins) {
         userScore = parseInt(document.getElementById("scores-player").innerText);
         document.getElementById("scores-player").innerText = ++userScore
         console.log("User: " +userScore);
-
-    } else { 
+''
+    } else if (computerWins === true) {
         computerScore = parseInt(document.getElementById("scores-robot").innerText);
         document.getElementById("scores-robot").innerText = ++computerScore;
         console.log("Computer: " + computerScore);
+
+    } else { 
+        console.log("It's a draw");
 }
-    gameSetMatch(userScore, computerScore );
+    gameSetMatch(userScore, computerScore);
 
 return {
     userScore: userScore,
