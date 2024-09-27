@@ -15,41 +15,42 @@ This game of chance pits the user against the computer to see who can be the fir
 
 ## User Stories
 
-* **First-time users** Should be able to start the game with little instruction.
-* **Returning visitors** Those with natural curiosity about how the game will develop, especially with the introduction of Easter eggs.
-* **Frequent users** Those who enjoyed the game the first time and are looking for a stress release.
+* **First-time users** - should easily begin the game with minimal guidance.
+* **Returning visitors** - those interested in seeing how the game evolves, particularly with new Easter eggs.
+* **Frequent users** - those who had fun playing initially and seek it as a means of stress relief.
+
 
 
 # Features
-The game is for people who enjoy the Big Bang Theory, and Star Trek and have nostalgic memories of computer games of the 80’s. It pays homage to the television shows with the Star Trek and space invaders fonts as well as the sofa. 
+The game is for people who enjoy the Big Bang Theory, and Star Trek and have nostalgic memories of computer games of the 80’s. It pays homage to the television shows with the Star Trek and Space Invaders.
 
 ![(assets/images/README/selection-verse.png)](assets/images/README/selection-verse.png)
 
 ## Title 
-* A short **heading** so it is easier to find and remember for repeat and frequent users. 
-* **Subheading** – explains exactly what it is and will have recognition for the majority of western people who would have played the game when they were younger.
+* The heading is short to make it easier to find and remember, especially for Repeat and frequent users. 
+* Subheadings clearly describe the content and will be familiar to many people in Western countries who played the game during their childhood.
+ 
 
 ## Sofa & Scores
-Fans of The Big Bang Theory will recognizse the significance of the characters often gathered on the sofa, which serves as the focal point on the show. Similarly, this game places importance on a central spot where activity happens around it.  
+Fans of The Big Bang Theory will recognise the significance of the characters often gathered on the sofa, which serves as the focal point of the show. Similarly, this game places importance on a central spot where activity happens around it.  
 
 In the mobile version the scores are kept underneath the sofa and are hidden when the games begins
 
-* **Hand** gestures to indicate what the player and user have submitted
-* **Outcome** – so users can understand why a game has been won or lost
-
+* **Outcome** – helps users understand the reasons behind a game's victory or defeat
 ## Selection Buttons
-* The users can select the hand gesture they wish to play
+* Users can choose a hand gesture, which is then shown above the player or computer.
+
 
 ![assets/images/README/selection-verse-user-choice.png](assets/images/README/selection-verse-user-choice.png)
 
 ## Modal
-An instructions modal is provided so users can see all the different options. This modal includes a quote from The Big Bang Theory explaining the rules, which can be accessed by clicking on the question mark icon. Using familiar iconography, this helps users understand that they can seek help by clicking on it. The modal can be closed by either clicking outside it or using the close button.
+An instructions modal displays various options and includes a quote from The Big Bang Theory, accessible via the question mark icon. This familiar icon indicates help is available. Users can close the modal by clicking outside it or using the close button.
 
 ![(assets/images/README/modal.png)](assets/images/README/modal.png)
 
 ## Future Features
 
-* Add more animations, such as visual representations of "Rock crushes Scissors".
+* Add  animations, such as visual representations of "Rock crushes Scissors".
 * Include an Easter egg where users can click on "Sheldon’s Spot" to access more content.
 * Implement hover-over colours that are a slightly deeper shade to indicate to desktop users what they can select.
 * Simplify the code using more loops, iterations, and arrays.
@@ -57,10 +58,10 @@ An instructions modal is provided so users can see all the different options. Th
 
 ## User Experience 
 
-In a game a chance, users are allowed to try their luck to beat the computer. The design allows users to understand what the game is and how to play without leaving the browser. Although are words, it is possible to use the game with limited English. 
+In a game of chance, users are given the opportunity to test their luck against the computer. The design ensures that players can grasp the concept and mechanics of the game without needing to leave the browser. Moreover, the game is accessible to those with limited English proficiency, thanks to its straightforward and intuitive interface.
 
 # Design
-Canva was used to make a mock-up that included wireframe and design elements. This mock-up helped to decide the layout, divisions, IDs, classes, and colour scheme. 
+A mock-up created with Canva featured wireframe and design components. This mock-up was instrumental in determining the layout, identifiers, classes, and colour palette. 
 
 ![(assets/images/README/mock-up.jpg)](assets/images/README/mock-up.jpg)
 
@@ -104,11 +105,11 @@ Three Google fonts are used in the project:
 * Google Pixel 7
 
 * **Gemini Ai** was used to check the function of any input code and ensure they were aligned to the developer’s purpose. Also, it was used as a coach to move throught the debugging process. If code was suggested it was not used in the project. 
-* **Human-testers** Two avid mobile game plauers were used leading to changes in the modal and added gameplay instructions on the landing page.
+* **Human-testers** Two avid mobile game players were involved, leading to changes in the modal and added gameplay instructions on the landing page.
 
 
 ## Frameworks, libraries & programs used
-* **Gitpod** - To facilitate the writing of code
+* **Gitpod** - to facilitate the writing of code
 * **Git** – to support version control
 * **Github** to deploy the website
 * **Google Fonts** – supply the fonts for the whole site
@@ -161,4 +162,6 @@ Lock into GibHub and locate the repository for [repository for Spock Game](https
 Copilot was used for proofreading. 
 
 # Acknowledgements
-The two former students who shared their previous projects gave me the inspiration and belief that the game was possible to create. 
+* The two former students who shared their previous projects gave me the inspiration and belief that the game was possible to create. [TR94](https://github.com/TR94/rock-paper-scissors-lizard-spock/tree/main) & 
+[knutinator](https://github.com/knutinator/lets-play-rpsls?tab=readme-ov-file). 
+* My tutor, Mitko Bachvarov, who provided much-needed encouragement and support.

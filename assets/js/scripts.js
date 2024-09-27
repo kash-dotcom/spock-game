@@ -269,19 +269,19 @@ function gameSetMatch(userScore, computerScore) {
     let restart = document.getElementById("restart");
     if (userScore >= 5) {
         gameOver.innerHTML = "Game Set Match: Player Wins!";
-        restart.style.display ="block";
+        restart.style.display = "block";
         console.log("Game Set Match: Player Wins!");
     } else if (computerScore >= 5) {
         gameOver.innerHTML = "Game Over...Computer Wins";
-        restart.style.display ="block";
+        restart.style.display = "block";
         console.log("Game Set Match: Computer Win!");
     }
 }
 // restart the game and turn the score 
 restart = document.getElementById("restart");
 
-restart.addEventListener("click", function() {
-  location.reload();
+restart.addEventListener("click", function () {
+    location.reload();
 });
 
 

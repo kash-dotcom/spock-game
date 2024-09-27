@@ -2,24 +2,24 @@
 // <weight>: Use a value from 100 to 900*/
 
 font {
-  font-family: 'Handjet', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings:
-    "ELGR" 1,
-    "ELSH" 2;
+    font-family: 'Handjet', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "ELGR" 1,
+        "ELSH" 2;
 }
 
 .roboto-mono {
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .orbitron {
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 900;
-  font-style: normal;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
 
@@ -33,7 +33,7 @@ body {
 /* Circle Button - https://stackoverflow.com/questions/38320878/circle-button-css*/
 
 .btn {
-    display:block;
+    display: block;
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -60,43 +60,53 @@ body {
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
     background-color: #262262;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-  }
-  
-  /* The Close Button */
-  .close {
+}
+
+/* The Close Button */
+.close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
-  }
- .modal-background {
+}
+
+.modal-background {
     display: none;
     position: fixed;
     z-index: 1;
@@ -105,7 +115,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color:  rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -129,14 +139,15 @@ strong {
     font-family: Orbitron;
     font-size: 1.3em;
 }
-#heading > h1 {
+
+#heading>h1 {
     font-family: Orbitron;
     font-size: 3rem;
     text-align: center;
 }
 
 
-#heading > h2 {
+#heading>h2 {
     font-size: 2rem;
     text-align: center;
 }
@@ -154,13 +165,13 @@ strong {
     font-family: Roboto Mono;
 }
 
-#outcome > h1{
+#outcome>h1 {
     text-align: center;
     font-family: 'Orbitron';
     font-size: 1.3em;
 }
 
-#winner > h3{
+#winner>h3 {
     text-align: center;
     font-family: 'Handjet';
     font-size: 1em;
@@ -174,16 +185,17 @@ strong {
 }
 
 #instruction-modal {
-  padding: 44px 0 0 13px;
-  border: 1px solid #888;
-  width: 100%; /* Could be more or less, depending on screen size */
-  color: aliceblue;
-  visibility: hidden;
+    padding: 44px 0 0 13px;
+    border: 1px solid #888;
+    width: 100%;
+    /* Could be more or less, depending on screen size */
+    color: aliceblue;
+    visibility: hidden;
 }
 
 #instruction-modal p {
     font-family: barlow, sans-serif;
-} 
+}
 
 
 #instructions {
@@ -227,7 +239,7 @@ strong {
 }
 
 #scissors {
-    background-color: #a21c16 ;
+    background-color: #a21c16;
     border: none;
 }
 
@@ -244,9 +256,9 @@ strong {
 
 /* selected hand gestures */
 .rock-selected {
-   color: #4e4577;
-   height: 65px;
-   width: 100px;
+    color: #4e4577;
+    height: 65px;
+    width: 100px;
 }
 
 .paper-selected {
@@ -278,11 +290,11 @@ strong {
     visibility: hidden;
 }
 
-#user-choice-img > i {
+#user-choice-img>i {
     display: none;
 }
 
-#robot-choice-img > i {
+#robot-choice-img>i {
     display: none;
 }
 
@@ -305,7 +317,8 @@ strong {
     flex-wrap: wrap;
 }
 
-#user-choice-img, #robot-choice-img {
+#user-choice-img,
+#robot-choice-img {
     display: inline-flex;
     justify-content: center;
 
@@ -316,6 +329,7 @@ strong {
     display: flex;
     flex-direction: column;
 }
+
 #robot-choice {
     display: flex;
     flex-direction: column;
@@ -340,7 +354,7 @@ strong {
 }
 
 #scores-robot {
-    color:#0a66bb;
+    color: #0a66bb;
     font-weight: 600;
 }
 
@@ -363,7 +377,7 @@ strong {
     display: none;
 }
 
-#score > p {
+#score>p {
     font-size: 33px;
 }
 
@@ -373,16 +387,15 @@ strong {
 
 
 @media only screen and (min-width: 564px) {
-    #choice-img{
+    #choice-img {
         display: flex;
         flex-direction: row;
         align-items: baseline;
         padding-right: 29px;
         align-self: center;
-        }
-    
+    }
+
     #user-choice {
         order: 0;
     }
 }
- 
